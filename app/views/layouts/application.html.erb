@@ -10,7 +10,7 @@
 
 <% if notice %>
 <script type="text/javascript">
-	noty({text: '<%= notice %>', type: 'alert'});
+	noty({text: '<%= notice %>', type: 'success' , theme: 'metroui'});
 </script>
 
 <% end %>
@@ -19,9 +19,13 @@
 <% if alert %>
 
 <script type="text/javascript">
-	noty({text: '<%= alert %>', type: 'error'});
+	noty({text: '<%= alert %>', type: 'error' , theme: 'metroui'});
 </script>
 <% end %>
+
+
+
+
  
 
 

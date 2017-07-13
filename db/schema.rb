@@ -11,7 +11,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170712071410) do
+ActiveRecord::Schema.define(version: 20170713164345) do
+
+  create_table "media", force: :cascade do |t|
+    t.string   "profile_photo", null: false
+    t.string   "photos"
+    t.string   "song"
+    t.string   "video"
+    t.string   "link",          null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.integer  "user_id"
+  end
+
+  add_index "media", ["user_id"], name: "index_media_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

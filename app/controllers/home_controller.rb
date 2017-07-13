@@ -6,4 +6,17 @@ class HomeController < ApplicationController
 	def index
 
 	end
+
+
+	def upload_details
+
+	end
+	
+   
+
+
+
+
+
+
 end

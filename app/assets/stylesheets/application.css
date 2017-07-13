@@ -97,6 +97,7 @@ div.authentication{
 
 .field input[type="email"],
 .field input[type="password"],
+.field input[type="text"],
 .field select {
     display: block;
     box-sizing: border-box;

@@ -9,4 +9,8 @@ class User < ActiveRecord::Base
          validates :username , :first_name , presence: true
          validates :username , uniqueness: { case_sensitive: false }
 
+         has_one :userdetail
+
+
+
 end

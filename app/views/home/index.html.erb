@@ -2,20 +2,47 @@
 
 <% if user_signed_in? %>
 
-<header><h1>LOCKER</h1>
+<header>
+		
+		<div class ="name">
+
+		<h4>M.I.C.</h4>
+		
+
+		</div>
 
 
-<nav>
-<ul>
-
-<li>  <%= link_to "Sign Out",destroy_user_session_path,method: :delete %>
-
-</li>
+		<nav>
+		<ul>
+			<li>Home</li>
+			<li>Contact</li>
+            <li>  <%= link_to "Sign Out",destroy_user_session_path,method: :delete %></li>
 	
 
 </ul>
 </nav>
-</header>
+</header><body>
+	<div class = "photocover">
+<div>
+</div>
+</div>
+
+<div class ="artistname">
+
+<%= current_user.first_name + current_user.last_name  %>
+
+
+</div>
+
+<div class = "media">
+  
+
+</div>
+
+
+
+
+</body>
 <% end %>
 
 <%= yield %>

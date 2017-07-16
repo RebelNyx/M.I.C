@@ -11,36 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20170713203714) do
-
-  create_table "media", force: :cascade do |t|
-    t.string   "profile_photo", null: false
-    t.string   "photos"
-    t.string   "song"
-    t.string   "video"
-    t.string   "link",          null: false
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
-    t.integer  "user_id"
-  end
-
-  add_index "media", ["user_id"], name: "index_media_on_user_id"
-
-  create_table "user_types", force: :cascade do |t|
-    t.string   "username",     null: false
-    t.string   "full_name",    null: false
-    t.string   "type_of_user", null: false
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-    t.integer  "user_id"
-  end
-
-  add_index "user_types", ["user_id"], name: "index_user_types_on_user_id"
-  add_index "user_types", ["username"], name: "index_user_types_on_username", unique: true
-=======
 ActiveRecord::Schema.define(version: 20170716110143) do
->>>>>>> new_db
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

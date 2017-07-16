@@ -70,13 +70,7 @@ div.authentication{
 
     }
 
-        .section {
 
-    font: normal 20px 'Bitter', serif;
-    color: black;
-    margin-bottom: 5px;
-
-    }
 
     .field{
     padding: 5px;
@@ -97,6 +91,7 @@ div.authentication{
 
 .field input[type="email"],
 .field input[type="password"],
+.field input[type="text"],
 .field select {
     display: block;
     box-sizing: border-box;
@@ -169,6 +164,18 @@ input[type="submit"]:hover{
 .links a:hover {
 	text-decoration: underline;
 	color: #2A688;
+}
+
+.Name{
+    display: flex;
+    justify-content: space-between;
+}
+
+.password {
+
+        display: flex;
+    justify-content: space-between;
+
 }
 
 

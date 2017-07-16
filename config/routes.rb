@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :userdetails , only: [:create , :new]
   
   devise_for :users
+
+  post 'upload' => 'userdetails#upload'
   
 
 

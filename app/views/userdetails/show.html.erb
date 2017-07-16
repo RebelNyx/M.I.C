@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @userdetail.user %>
+</p>
+
+<p>
+  <strong>Bio:</strong>
+  <%= @userdetail.bio %>
+</p>
+
+<p>
+  <strong>Artist type:</strong>
+  <%= @userdetail.artist_type %>
+</p>
+
+<p>
+  <strong>Profile photo:</strong>
+  <%= @userdetail.profile_photo %>
+</p>
+
+<p>
+  <strong>Fblink:</strong>
+  <%= @userdetail.fblink %>
+</p>
+
+<p>
+  <strong>Ytlink:</strong>
+  <%= @userdetail.ytlink %>
+</p>
+
+<p>
+  <strong>Soundcloud:</strong>
+  <%= @userdetail.soundcloud %>
+</p>
+
+<%= link_to 'Edit', edit_userdetail_path(@userdetail) %> |
+<%= link_to 'Back', userdetails_path %>

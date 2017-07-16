@@ -8,10 +8,7 @@ class HomeController < ApplicationController
 	end
 
 
-	def upload_details
 
-	end
-	
    
 
 

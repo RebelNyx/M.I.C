@@ -11,7 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170716110143) do
+ActiveRecord::Schema.define(version: 20170716130241) do
+
+  create_table "userdetails", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "bio"
+    t.string   "artist_type"
+    t.string   "profile_photo"
+    t.string   "fblink"
+    t.string   "ytlink"
+    t.string   "soundcloud"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "userdetails", ["user_id"], name: "index_userdetails_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

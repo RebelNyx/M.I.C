@@ -17,6 +17,7 @@ class UserdetailsController < ApplicationController
   # GET /userdetails/new
   def new
     @userdetail = Userdetail.new
+
   end
 
   # GET /userdetails/1/edit
@@ -77,7 +78,11 @@ class UserdetailsController < ApplicationController
 
     current_user.profile_photo = filename
     current_user.save!
-    return redirect_to '/'
+
+    redirect_to '/'
+
+    
+
   end
   
 

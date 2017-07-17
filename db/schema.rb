@@ -11,18 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170716131310) do
+ActiveRecord::Schema.define(version: 20170717205303) do
 
   create_table "userdetails", force: :cascade do |t|
     t.integer  "user_id"
-    t.string   "bio",           null: false
-    t.string   "artist_type",   null: false
-    t.string   "profile_photo"
+    t.string   "bio",         null: false
+    t.string   "artist_type", null: false
     t.string   "fblink"
     t.string   "ytlink"
     t.string   "soundcloud"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   add_index "userdetails", ["user_id"], name: "index_userdetails_on_user_id"
@@ -47,6 +46,7 @@ ActiveRecord::Schema.define(version: 20170716131310) do
     t.string   "username",                            null: false
     t.string   "first_name",                          null: false
     t.string   "last_name",                           null: false
+    t.string   "profile_photo"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

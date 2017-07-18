@@ -1,35 +1,94 @@
-<p id="notice"><%= notice %></p>
 
 
-<p>
-  <strong>Bio:</strong>
-  <%= @userdetail.bio %>
-</p>
 
-<p>
-  <strong>Artist type:</strong>
-  <%= @userdetail.artist_type %>
-</p>
-
-<p>
-  <strong>Profile photo:</strong>
-<%= render 'profile' %>
-</p>
-
-<p>
-  <strong>Fblink:</strong>
-  <%= @userdetail.fblink %>
-</p>
-
-<p>
-  <strong>Ytlink:</strong>
-  <%= @userdetail.ytlink %>
-</p>
-
-<p>
-  <strong>Soundcloud:</strong>
-  <%= @userdetail.soundcloud %>
-</p>
+<div class="update">
 
 <%= link_to 'Edit', edit_userdetail_path(@userdetail) %> |
 <%= link_to 'Back', userdetails_path %>
+
+</div>
+
+<div  class="user_profile">
+
+
+ 
+<%= render 'profile' %>
+
+
+
+
+<div id= "user_name">
+
+  <%= current_user.first_name%>
+  <%= current_user.last_name%>
+
+
+
+</div>
+
+
+
+
+<div id= "user_bio">
+
+  <%= @userdetail.bio %>
+
+
+</div>
+
+
+<div id="user_description">
+
+  <%= @userdetail.artist_type %>
+
+
+</div>
+
+
+
+<div class="links">
+
+<div id="user_fblink">
+
+
+
+
+    <a href = "  <%= @userdetail.fblink %>">
+
+  <%= image_tag "/assets/fb.png" %>
+
+  </a>
+
+
+</div>
+
+<div id="user_ytlink">
+
+
+  <a href = "<%= @userdetail.ytlink %>">
+
+  <%= image_tag "/assets/youtube.png" %>
+
+  </a>
+ 
+
+</div>
+
+<div id="user_soundcloud">
+
+ 
+
+    <a href = " <%= @userdetail.soundcloud %>">
+
+  <%= image_tag "/assets/soundcloud.png" %>
+
+  </a>
+
+
+</div>
+
+</div>
+
+
+
+</div>

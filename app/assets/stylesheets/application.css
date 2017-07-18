@@ -24,7 +24,7 @@
 
 body {
 	background-color: #f5f5f5;
-      background: url(/localimages/background.jpg) no-repeat center center fixed; 
+
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;

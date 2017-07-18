@@ -7,15 +7,50 @@
 	
 	justify-content: center;
 	padding-top: 130px;
+    flex-direction: column;
 
 	font-family: 'Open Sans Condensed', arial, sans;
    
     padding: 30px;
     background: #FFFFFF;
-    margin: 50px auto;
+    margin: 50px ;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
     -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
     -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+
+}
+
+
+
+div.edit_info {
+
+    display: flex;
+    justify-content: center;
+    
+    color: grey;
+
+    border-bottom: 1px;
+    background-color: white;
+    margin-bottom: 30px;
+
+
+
+}
+
+
+div.content{
+    display:flex;
+    padding-top: 30px;
+
+}
+img{
+
+    width: 25px;
+    height: 25px;
+        box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.22);
+
+
+
 
 }
 
@@ -32,6 +67,13 @@
 
 	
 }
+.upload_photo{
+
+    align-items: center;
+    
+
+
+}
 
 #userdetail_bio , #userdetail_artist_type  , #userdetail_fblink , #userdetail_ytlink , #userdetail_soundcloud
 
@@ -40,16 +82,17 @@
     -moz-box-sizing: border-box;
     outline: none;
     display: block;
-    width: 800px;
+    width: 700px;
     padding: 7px;
-    border: none;
-    border-bottom: 1px solid #ddd;
+    border : 1px solid grey;
+
     background: transparent;
     margin-bottom: 10px;
     font: 16px Arial, Helvetica, sans-serif;
     height: 45px;
 
     margin-bottom: 20px;
+    border-radius: 20px;
 }
 
 #userdetail_artist_type {

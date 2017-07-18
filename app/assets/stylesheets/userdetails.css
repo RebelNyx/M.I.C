@@ -210,6 +210,7 @@ img{
     display: block;
     width: 80%;
     max-width: 400px;
+    height: auto;
 }
 
 /* Caption of Modal Image */

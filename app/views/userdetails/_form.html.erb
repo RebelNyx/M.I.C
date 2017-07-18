@@ -3,12 +3,16 @@
 
 <div class="userdetail">
 <div class = "edit_info">
-
+<% if current_user.userdetail %>
 <h2>
-  
-  Create Profile
-
+Edit Intro
 </h2>
+
+<% else %>
+
+<h2> Create Profile </h2>
+
+<% end %>
 
 
 </div><p id =mandatory>*Mandatory Fields</p>

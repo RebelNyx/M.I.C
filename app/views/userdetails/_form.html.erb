@@ -3,23 +3,7 @@
 
  <div class="profile_photo">
 
-
-
- 
-
- <div class="photo">
-
-  <% if current_user.profile_photo %>
-
-<img src="/uploads/<%= current_user.profile_photo %>" >
-
-<% else %>
-
-<img src="default.png">
-
-<% end %>
-
-</div>
+<%= render 'profile' %>
    
 
 

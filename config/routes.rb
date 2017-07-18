@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
   
   
-  resources :userdetails , only: [:create , :new]
+  resources :userdetails , only: [:create , :new, :show, :edit , :update ]
   
   devise_for :users
 
-  post 'upload' => 'userdetails#upload'
+  post '/upload' => 'userdetails#upload'
   
 
 

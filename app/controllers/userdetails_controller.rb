@@ -3,6 +3,23 @@ class UserdetailsController < ApplicationController
 
     before_action :authenticate_user!
 
+    before_action :check , only: [:new]
+
+    def check
+
+      if current_user.userdetail
+
+       redirect_to controller: 'userdetails', action: 'show', id: current_user.userdetail.id 
+   
+
+    end
+
+  end
+  
+
+
+
+
   # GET /userdetails
   # GET /userdetails.json
   def index
@@ -33,7 +50,7 @@ class UserdetailsController < ApplicationController
 
     respond_to do |format|
       if @userdetail.save
-        format.html { redirect_to '/home', notice: 'Userdetail was successfully created.' }
+        format.html { redirect_to @userdetail, notice: 'Userdetail was successfully created.' }
         format.json { render :show, status: :created, location: @userdetail }
       else
         format.html { render :new }
@@ -79,7 +96,7 @@ class UserdetailsController < ApplicationController
     current_user.profile_photo = filename
     current_user.save!
 
-    redirect_to '/'
+    redirect_to :back
 
     
 

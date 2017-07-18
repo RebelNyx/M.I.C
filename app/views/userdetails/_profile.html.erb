@@ -1,9 +1,9 @@
 
- <div class="photo">
+ <div id ="photo">
 
   <% if current_user.profile_photo %>
 
-<img src="/uploads/<%= current_user.profile_photo %>" >
+<img  id = "image" src="/uploads/<%= current_user.profile_photo %>" alt="<%= current_user.first_name %>"  >
 
 <% else %>
 

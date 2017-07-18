@@ -1,4 +1,23 @@
+
+
+
 <div class="userdetail">
+<div class = "edit_info">
+
+<h2>
+  
+  Create Profile
+
+</h2>
+
+
+</div><p id =mandatory>*Mandatory Fields</p>
+<hr>
+
+
+
+<div class = "content">
+
 
 
  <div class="profile_photo">
@@ -12,7 +31,7 @@
     <div class="upload_photo">
     
 <%= file_field_tag :image %>
-<br>
+<br><br>
 <%= submit_tag %>
   </div>
 
@@ -39,22 +58,24 @@
  
   <div class="Bio">
     
-    <%= f.text_field :bio , placeholder: "Who Are You ?" %>
+    <%= f.text_field :bio , placeholder: "Who Are You ? (Band/ Individual Artist)  *" %>
   </div>
   <div class="description">
   
-    <%= f.text_area :artist_type , placeholder: "Tell Me About Yourself !!!"  %>
+    <%= f.text_area :artist_type , placeholder: "Tell Me About Yourself !!!   *"  %>
   </div>
 
   <div class="fblink">
+ 
    
     <%= f.text_field :fblink , placeholder: "Facebook Link"  %>
   </div>
   <div class="ytlink">
-   
+ 
     <%= f.text_field :ytlink , placeholder: "Youtube Link"  %>
   </div>
   <div class="soundcloud">
+ 
     
     <%= f.text_field :soundcloud , placeholder: "SoundCloud Link"  %>
   </div>
@@ -62,5 +83,6 @@
     <%= f.submit %>
   </div>
 <% end %>
+</div>
 
 </div>

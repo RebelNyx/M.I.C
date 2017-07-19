@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   
   
-  resources :userdetails , only: [:create , :new, :show, :edit , :update ]
+  resources :userdetails , only: [:create , :new, :show, :edit , :update, :users ]
   
   devise_for :users
 

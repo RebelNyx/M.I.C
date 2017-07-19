@@ -1,3 +1,9 @@
+
+<h3> Loggen In User : </h3> 
+<%= current_user.first_name + current_user.last_name %> <br> 
+
+<h3>Other Users:</h3>
+
 <% @users.each do |user| %>
 
 <%= render 'users' , user: user %>

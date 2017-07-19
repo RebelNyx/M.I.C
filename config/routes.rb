@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
 
   get '/home' => "home#index"
+  get '/users' => 'home#users'
+  post '/follow' => 'home#follow'
 
   root 'userdetails#new'
 

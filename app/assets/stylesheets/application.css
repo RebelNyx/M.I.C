@@ -30,10 +30,22 @@ body {
   -o-background-size: cover;
   background-size: cover;
 
-    padding-left: 80px;
-    padding-right: 80px;
-}
+   }
 
+header{
+
+    padding-left: 30px;
+    padding-right: 3s0px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #343434;
+    border-bottom: 1px solid grey;
+    margin-top:0;
+    margin-right: 0;
+    margin-left: 0;
+}
 
 
 
@@ -41,12 +53,12 @@ body {
 div.authentication{
     opacity: 1;
     
-     position: fixed;
-     top: 20px;
+     position: absolute;
+     top: 30px;
      right: 50px;
 	display: flex;
 	flex-direction: column;
-   width:400px;
+   width:350px;
     padding:30px; 
     margin:40px auto;
     background-color: #142735;
@@ -66,7 +78,7 @@ div.authentication{
      h1 {
 
     background: #0e0e0e;
-    padding: 20px 30px 15px 30px;
+    padding: 15px 30px 15px 30px;
     margin: -30px -30px 30px -30px;
     border-radius: 10px 10px 0 0;
     -webkit-border-radius: 10px 10px 0 0;
@@ -78,6 +90,7 @@ div.authentication{
     -webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
     box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
     border: 1px solid black;
+
 
     }
 

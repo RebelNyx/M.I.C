@@ -26,6 +26,11 @@ class UserdetailsController < ApplicationController
     @userdetails = Userdetail.all
   end
 
+  def users
+    @users = User.all
+  end
+
+
   # GET /userdetails/1
   # GET /userdetails/1.json
   def show

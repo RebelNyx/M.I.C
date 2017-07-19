@@ -1,0 +1,11 @@
+<%= user.first_name + user.last_name %>  <br>
+
+<% if current_user.can_follow(user.id) %>
+
+	<%= link_to "Follow", url_for(controller: :follow, action: :follow, followee_id: user.id), method: :post %> <br>
+<% end %>
+
+<% if current_user.can_un_follow(user.id) %> 
+<%= link_to "UnFollow", url_for(controller: :follow, action: :unfollow, followee_id: user.id), method: :post %>
+<br>
+<% end %>

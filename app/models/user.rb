@@ -45,6 +45,24 @@ def follow_relation user_id
 
   end
 
+   def follower_ids
+
+    FollowerMapping.where(followee_id: id).pluck(:follower_id)
+
+  end
+
+   def followees_count
+
+    FollowerMapping.where(follower_id: id).count
+
+  end
+
+   def followers_count
+
+    FollowerMapping.where(followee_id: id).count
+
+  end
+
 
   class UserRelations
 

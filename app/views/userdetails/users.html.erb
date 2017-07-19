@@ -1,11 +1,20 @@
+<div class ="people">
+<div class = "loggedin">
+<h3> Logged In User : </h3><hr> 
+<%= current_user.first_name + current_user.last_name %> <br>
 
-<h3> Loggen In User : </h3> 
-<%= current_user.first_name + current_user.last_name %> <br> 
+</div>
 
-<h3>Other Users:</h3>
+<div class = "otherusers">
+
+<h3>Other Users:</h3><hr>
 
 <% @users.each do |user| %>
 
 <%= render 'users' , user: user %>
 
-<% end %>s
+<% end %>
+</div>
+
+
+</div>

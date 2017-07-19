@@ -35,19 +35,48 @@ body {
 header{
 
     padding-left: 30px;
-    padding-right: 3s0px;
-    height: 70px;
+    padding-right: 30px;
+    height: 60px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #343434;
+    background-color: rgb(80, 74, 74);
     border-bottom: 1px solid grey;
     margin-top:0;
     margin-right: 0;
     margin-left: 0;
+
+}
+
+body div.name{
+
+    color: white;
+font-family: monospace;
+    font-size: 24px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 26.4px; 
 }
 
 
+header nav ul{
+    display: flex;
+    color: white;
+    font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
+    font-size: 14px;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 500;
+    line-height: 15.4px;
+}
+
+body header nav li{
+    list-style: none;
+margin-right: 20px;
+
+
+}
 
 
 div.authentication{
@@ -61,7 +90,8 @@ div.authentication{
    width:350px;
     padding:30px; 
     margin:40px auto;
-    background-color: #142735;
+    background-color: white;
+    
     border-radius: 10px;
     -webkit-border-radius:10px;
     -moz-border-radius: 10px;*/
@@ -77,7 +107,7 @@ div.authentication{
 
      h1 {
 
-    background: #0e0e0e;
+    background: rgba(80, 67, 67, 0.98);
     padding: 15px 30px 15px 30px;
     margin: -30px -30px 30px -30px;
     border-radius: 10px 10px 0 0;
@@ -98,8 +128,7 @@ div.authentication{
 
     .field{
     padding: 5px;
-    background-color: #142735;
-    
+    background-color: white;
     border-radius: 6px;
     margin-bottom: 12px;
    /* background-color: black; */
@@ -138,11 +167,13 @@ div.authentication{
 	justify-content: flex-start;
 	align-content: center;
     margin-left: 5px;
+    
+    height: 40px;
 }
 
  input[type = "submit"]{
 
-    background: #0e0e0e;
+    background: rgba(80, 67, 67, 0.98);
     padding: 8px 20px 8px 20px;
     border-radius: 5px;
     -webkit-border-radius: 5px;

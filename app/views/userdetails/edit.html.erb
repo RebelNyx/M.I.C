@@ -1,6 +1,21 @@
+<div class="update">
 
+<li> <%= link_to "Users", users_path %> </li>
+<li> <%= link_to "Account Setting", edit_user_registration_path %> </li>
+<li><%= link_to 'Profile' ,@userdetail %></li>
+
+
+</div>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @userdetail %> |
-<%= link_to 'Back', userdetails_path %>
+
+
+
+<script type="text/javascript">
+var signout = $("#signout");
+
+var update_list = $(".update");
+
+signout.before(update_list);
+</script>

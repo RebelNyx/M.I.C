@@ -11,11 +11,13 @@
 </div>
 
 <div  class="user_profile">
+
 <div class="update">
 
 <li><%= link_to 'Edit', edit_userdetail_path(@userdetail) %> </li>
 <li> <%= link_to "Users", users_path %> </li>
 <li> <%= link_to "Account Setting", edit_user_registration_path %> </li>
+
 
 
 </div>
@@ -110,6 +112,13 @@
 </div>
 
 <script type="text/javascript">
+
+var signout = $("#signout");
+
+var update_list = $(".update");
+
+signout.before(update_list);
+
   
     // Get the modal
 var modal=  $('#myModal');

@@ -1,7 +1,9 @@
 
+<%= user.first_name + user.last_name %>
 
 
-<%= user.first_name + user.last_name %> 
+
+
 
 <% if current_user.can_follow(user.id) %>
 
@@ -19,3 +21,6 @@
 <%= link_to "UnFollow", url_for(controller: :follow, action: :unfollow, followee_id: user.id), method: :post %>
 
 <% end %>
+
+ <%= link_to "profile" ,
+ url_for(controller: :userdetails, action: :show, id: user.id), method: :get %>

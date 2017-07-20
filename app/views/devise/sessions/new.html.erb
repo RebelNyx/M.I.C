@@ -1,7 +1,8 @@
 
 
-<div class ="aboutsite">
-<%= render "home/aboutsite" %>
+<div id ="aboutsite">
+<%= render "aboutsite" %>
+</div>
 
 </div>
 <div class="authentication">
@@ -53,15 +54,16 @@
 </div>
 
 <script type="text/javascript">
-    $(".aboutsite > div:gt(0)").hide();
+    $("#aboutsite  div:gt(0)").hide(); //first show only gt(0) greater than 0
+
 setInterval(function() { 
-  $('div.aboutsite > div:first')
-    .fadeOut(0)
-    .next()
-    .fadeIn(1000)
-    .end()
-    .appendTo('div.aboutsite');
-},  3000);
+  $("#aboutsite  div:first-child")
+    .fadeOut(0) //gayab ho rha h
+    .next() //next div
+    .fadeIn(1000) // aarha h
+    .end() // move pointer back to top
+     .appendTo('#aboutsite'); //move to last
+},  4000);
 
 
 

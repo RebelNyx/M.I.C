@@ -1,11 +1,12 @@
 <div class="update">
 
 <li><%= link_to 'Edit', 
-url_for(controller: :userdetails, action: :edit , id: current_user.id), method: :get %> </li>
+url_for(controller: :userdetails, action: :edit , id: current_user.userdetail.id), method: :get %> </li>
 
 <li> <%= link_to "Account Setting", edit_user_registration_path %> </li>
 <li><%= link_to 'Profile' ,
- url_for(controller: :userdetails , action: :show , id: current_user.id), method: :get %></li>
+ url_for(controller: :userdetails , action: :show , id: current_user.userdetail.id), method: :get %></li>
+ <li  id= "signout"><%= link_to "Sign Out",destroy_user_session_path,method: :delete %></li>
 
 
 </div>
@@ -32,10 +33,10 @@ url_for(controller: :userdetails, action: :edit , id: current_user.id), method: 
 </div>
 
 <script type="text/javascript">
-var signout = $("#signout");
+var list = $("#list");
 
 var update_list = $(".update");
 
-signout.before(update_list);
+list.append(update_list);
 </script>
 

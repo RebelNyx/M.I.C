@@ -1,6 +1,5 @@
 
 
-
 // This is a manifest file that'll be compiled into application.js, which will include all the files
 // listed below.
 //
@@ -18,6 +17,8 @@
 //= require turbolinks
 //= require jquery.noty.packaged.min.js
 //= require_tree .
+
+
 
 
 

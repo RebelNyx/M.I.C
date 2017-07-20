@@ -1,4 +1,8 @@
 <%= devise_error_messages! %>
+<div class ="aboutsite">
+<%= render "home/aboutsite" %>
+
+</div>
 
 <div class="authentication">
 
@@ -60,3 +64,19 @@
 </div>
 
 </div>
+
+ <script type="text/javascript">
+    $(".aboutsite > div:gt(0)").hide();
+setInterval(function() { 
+  $('div.aboutsite > div:first')
+    .fadeOut(0)
+    .next()
+    .fadeIn(1000)
+    .end()
+    .appendTo('div.aboutsite');
+},  3000);
+
+
+
+    
+   </script>

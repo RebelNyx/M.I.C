@@ -3,6 +3,7 @@
 
 
 
+
 <!-- The Modal -->
 <div id="myModal" class="modal">
   <span class="close" id="close">×</span>
@@ -14,31 +15,41 @@
 
 <div class="update">
 
-<li><%= link_to 'Edit', edit_userdetail_path(@userdetail) %> </li>
+<li><%= link_to 'Edit', 
+url_for(controller: :userdetails, action: :edit , id: current_user.id), method: :get %> </li>
 <li> <%= link_to "Users", users_path %> </li>
 <li> <%= link_to "Account Setting", edit_user_registration_path %> </li>
+<li><%= link_to 'Profile' ,
+ url_for(controller: :userdetails , action: :show , id: current_user.id), method: :get %></li>
+
 
 
 
 </div>
 
+ <div id ="photo">
 
+  <% if @userdetail.user.profile_photo %>
 
+<img  id = "image" src="/uploads/<%= @userdetail.user.profile_photo %>" alt="<%=@userdetail.user.first_name %>"  >
 
+<% else %>
 
- 
-<%= render 'profile' %>
+<img src="default.png">
 
-<h3>Followers : <%= current_user.followers_count %></h3>
-<h3>Following : <%= current_user.followees_count %></h3>
+<% end %>
+</div>
+
+<h3>Followers : <%= @userdetail.user.followers_count %></h3>
+<h3>Following : <%= @userdetail.user.followees_count %></h3>
 
 
 
 
 <div id= "user_name">
 
-  <%= current_user.first_name%>
-  <%= current_user.last_name%>
+  <%= @userdetail.user.first_name%>
+  <%= @userdetail.user.last_name%>
 
 
 

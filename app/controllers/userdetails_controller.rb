@@ -90,19 +90,26 @@ class UserdetailsController < ApplicationController
 
   def upload
         uploaded_file = params[:image]
+
+        if uploaded_file.nil?
+
+          redirect_to :back
+
+        else
+    
     filename = SecureRandom.hex + "." +uploaded_file.original_filename.split('.')[1]
     filepath = Dir.pwd + "/public/uploads/" + filename
   File.open(filepath,'wb') do |file|
     file.write(uploaded_file.read())
   end
     
-    
-
+   
     current_user.profile_photo = filename
     current_user.save!
 
     redirect_to :back
 
+  end
     
 
   end

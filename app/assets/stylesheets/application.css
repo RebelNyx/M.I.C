@@ -169,19 +169,20 @@ div.edit_authentication {
      h1 {
 
    /* background: rgba(80, 67, 67, 0.98); */
-   background-color: #25033a;
+   
+
     padding: 15px 30px 15px 30px;
     margin: -30px -30px 30px -30px;
     border-radius: 10px 10px 0 0;
     -webkit-border-radius: 10px 10px 0 0;
     -moz-border-radius: 10px 10px 0 0;
-    color: #fff;
+    color: #1ab696;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
     font: normal 30px 'Bitter', serif;
     -moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
     -webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
     box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
-    border: 1px solid black;
+    
 
 
     }
@@ -237,7 +238,7 @@ div.edit_authentication {
  input[type = "submit"]{
 
   /*  background: rgba(80, 67, 67, 0.98); */
-  background-color: #25033a;
+  background-color: #3a6271;
     padding: 8px 20px 8px 20px;
     border-radius: 5px;
     -webkit-border-radius: 5px;
@@ -248,13 +249,16 @@ div.edit_authentication {
     -moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
     -webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
     box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
-    border: 1px solid #257C9E;
+   
     font-size: 15px;
 
 }
 
 input[type="submit"]:hover{
     color: black;
+    
+
+
     -moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
     -webkit-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);
     box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.28);

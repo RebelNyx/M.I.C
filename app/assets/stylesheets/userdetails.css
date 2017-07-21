@@ -26,6 +26,26 @@ main.start{
 
 
 
+.userdetail {
+    
+    border : 1px solid grey;
+    display: flex;
+    
+    justify-content: center;
+    padding-top: 130px;
+    flex-direction: column;
+
+    font-family: 'Open Sans Condensed', arial, sans;
+   
+    padding: 30px;
+    background: #FFFFFF;
+    margin: 50px ;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+
+}
+
 
 
 

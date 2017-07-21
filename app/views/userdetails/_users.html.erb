@@ -22,5 +22,9 @@
 
 <% end %>
 
+<% unless user.userdetail.nil? %>
+
  <%= link_to "profile" ,
  url_for(controller: :userdetails, action: :show, id: user.userdetail.id), method: :get %>
+
+ <% end %>

@@ -5,11 +5,7 @@
 
 $(document).ready(function(){
 
-	  var list = $("#list");
 
-var update_list = $(".update");
-
-list.append(update_list);
 
 
 
@@ -43,6 +39,10 @@ span.on('click',function(){
 
   modal.css("display" , "none");
 });
+
+
+
+
 
 });
 

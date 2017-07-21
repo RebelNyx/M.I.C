@@ -1,6 +1,5 @@
 
 
-
 <div class="userdetail">
 <div class = "edit_info">
 <% if current_user.userdetail %>
@@ -24,25 +23,36 @@ Edit Intro
 
 
 
- <div class="profile_photo">
+ <div id ="profile_photo">
+
+ 
+
+ <div id="photo_show">
 
 <%= render 'profile' %>
+
+</div>
+
+
    
 
 
- <%= form_tag url_for(controller: :userdetails , action: :upload) ,multipart: true do %>
+<!--  mutipart and remote can't use together no obstrutive js for oploading  -->
+
+
+<%= form_tag url_for(controller: :userdetails , action: :upload) ,multipart: true , id: "form" do %>
 
     <div class="upload_photo">
     
 <%= file_field_tag :image %>
 <br><br>
-<%= submit_tag %>
+<%= submit_tag "Upload" ,:id => 'submit'%>
   </div>
 
   <% end %>
 
-  </div>
-
+</div>
+ 
 
 <%= form_for(@userdetail) do |f| %>
   <% if @userdetail.errors.any? %>
@@ -90,3 +100,48 @@ Edit Intro
 </div>
 
 </div>
+
+<script type="text/javascript">
+  
+     $("#form").on("submit" , function(event){
+
+    event.preventDefault();
+  
+  var formData = new FormData(this);
+console.log(formData);
+
+   $.ajax({
+    type: 'POST',
+    url: '/upload', 
+    
+    data: formData, // send data
+    //dataType : what type of data you want 
+
+    contentType: false,  // prevent default force jquery not to add default imp for multipart
+    processData: false,  // prevent data convert into string
+
+    success: function(data){
+
+ 
+console.log(data);
+
+
+   //$("#image").attr("src" , "default.png")
+    //$("#photo_show").html(" <%= j render 'profile' %> ")  js work procedure event handling imp 
+    
+   $("#photo img").attr("src" , ("<%= asset_path('/uploads/')%>" + data)) //asset pipeline concept
+   
+
+    },
+    
+        errors: function(){
+
+          console.log(arguments);
+        }
+
+   });
+
+
+  });
+
+</script>

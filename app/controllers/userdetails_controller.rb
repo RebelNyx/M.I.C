@@ -89,6 +89,8 @@ class UserdetailsController < ApplicationController
   end
 
   def upload
+
+
         uploaded_file = params[:image]
 
         if uploaded_file.nil?
@@ -99,7 +101,7 @@ class UserdetailsController < ApplicationController
     
     filename = SecureRandom.hex + "." +uploaded_file.original_filename.split('.')[1]
     filepath = Dir.pwd + "/public/uploads/" + filename
-  File.open(filepath,'wb') do |file|
+    File.open(filepath,'wb') do |file|
     file.write(uploaded_file.read())
   end
     
@@ -107,7 +109,9 @@ class UserdetailsController < ApplicationController
     current_user.profile_photo = filename
     current_user.save!
 
-    redirect_to :back
+   # render :json => {filepath: filepath , filename: filename} 
+
+  render :text => filename  #send data back to ajax as text
 
   end
     

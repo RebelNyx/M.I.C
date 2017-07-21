@@ -29,14 +29,20 @@ url_for(controller: :userdetails, action: :edit , id: current_user.userdetail.id
 <% end %>
 </div>
 
-
 </div>
-
 <script type="text/javascript">
-var list = $("#list");
+	
+	$(document).ready(function(){
+
+ var list = $("#list");
 
 var update_list = $(".update");
 
 list.append(update_list);
+
+	});
+
 </script>
+
+
 

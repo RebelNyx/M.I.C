@@ -6,14 +6,18 @@
 <div id="myModal" class="modal">
   <span class="close" id="close">×</span>
   <img class="modal-content" id="img01">
+ 
   <div id="caption"></div>
 </div>
 
 
 
+
+
 <div class="update">
 
-<li><%= link_to 'Edit', 
+<li>
+<%= link_to 'Edit', 
 url_for(controller: :userdetails, action: :edit , id: current_user.userdetail.id), method: :get %> </li>
 <li> <%= link_to "Users", users_path %> </li>
 <li> <%= link_to "Account Setting", edit_user_registration_path %> </li>
@@ -27,13 +31,16 @@ url_for(controller: :userdetails, action: :edit , id: current_user.userdetail.id
 </div>
 
 
+
+
 <div  class="user_profile">
-<img  id = "cover_photo" src="/assets/defocussed.jpg">
-
-<div class = "biopart1">
+<!-- <img  id = "cover_photo" src="/assets/defocussed.jpg"> -->
 
 
- <div class ="photo">
+
+
+
+ <div id ="photo_show">
 
   <% if @userdetail.user.profile_photo %>
 
@@ -46,12 +53,14 @@ url_for(controller: :userdetails, action: :edit , id: current_user.userdetail.id
 <% end %>
 </div>
 
+</div>
 
 
-<hr>
 
 
-<div class ="biopart1-2">
+<div id="bio_start">
+
+<div class ="user_detail">
 
 <div id= "user_name">
 
@@ -67,35 +76,34 @@ url_for(controller: :userdetails, action: :edit , id: current_user.userdetail.id
 
 <div id= "user_bio">
 
-<h2>  <%= @userdetail.bio %> </h2>
+  <%= @userdetail.bio %>
 </div>
 
 
 <div id="user_description">
 
-<h3> Bio: <%= @userdetail.artist_type %></h3>
+  <%= @userdetail.artist_type %>
 
 
-</div>
-<div id ="follow">
-<h3>Followers : <%= @userdetail.user.followers_count %>
-Following : <%= @userdetail.user.followees_count %></h3>
 </div>
 
 
 
 <div class="links">
 
+Find me here !!
+
 <div id="user_fblink">
+
 
 
 
 
     <a href = "  <%= @userdetail.fblink %>">
 
-  <%= image_tag "/assets/fb.png" %>
+  <%= @userdetail.fblink %>
 
-  </a>
+  </a> 
 
 
 </div>
@@ -103,9 +111,11 @@ Following : <%= @userdetail.user.followees_count %></h3>
 <div id="user_ytlink">
 
 
+
+ 
   <a href = "<%= @userdetail.ytlink %>">
 
-  <%= image_tag "/assets/youtube.png" %>
+  <%= @userdetail.ytlink %>
 
   </a>
  
@@ -114,24 +124,42 @@ Following : <%= @userdetail.user.followees_count %></h3>
 
 <div id="user_soundcloud">
 
+
+
+
+
+
+
  
 
     <a href = " <%= @userdetail.soundcloud %>">
 
-  <%= image_tag "/assets/soundcloud.png" %>
+ <%= @userdetail.soundcloud %>
+ 
 
-  </a>
+  </a> 
 
+
+
+</div>
 
 </div>
 
 </div>
 
+<div class="user_media">
+
+<div id ="follow">
+<h3>Followers : <%= @userdetail.user.followers_count %>
+Following : <%= @userdetail.user.followees_count %></h3>
+</div>
+
+  
+</div>
+
+</div>
 
 
-</div>
-</div>
-</div>
 
 <script type="text/javascript">
   

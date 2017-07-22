@@ -27,7 +27,7 @@ Edit Intro
 
  
 
- <div id="photo_show">
+ <div id="pic">
 
 <%= render 'profile' %>
 
@@ -130,7 +130,6 @@ console.log(data);
     //$("#photo_show").html(" <%= j render 'profile' %> ")  js work procedure event handling imp 
     
    $("#photo img").attr("src" , ("<%= asset_path('/uploads/')%>" + data)) //asset pipeline concept
-   
    
 
     },

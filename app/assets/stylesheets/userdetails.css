@@ -1,27 +1,103 @@
-main.start{
-    padding: 0;
-}
 
 
-.biopart1{display: flex;
+
+.user_profile{display: flex;
 
 
-     margin-top: -100px;
+flex-direction: column;
+
+ justify-content: flex-end;
+
+    /* margin-top: -100px;*/
     background-color: white;
-    margin-left: 120px;
-    margin-right: 120px;
+/*    margin-left: 120px;
+    margin-right: 120px;*/
+    margin-top: 20px;
+    margin-bottom: 20px;
+      border : 1px solid white;
+
+    padding: 30px;
+
+
+
+   
+
+    font-family: 'Open Sans Condensed', arial, sans;
+   
+   
+    background: #FFFFFF;
+    
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+
+
+}
+
+#bio_start {
+
+    display: flex;
+  
+    margin-top: 20px;
+    margin-bottom: 20px;
 
 }
 
 
-.biopart1-2{ margin:20px;
+.user_detail , .user_media{     
+
 
 
     display: flex;
     flex-direction: column;
-    font: 16px Arial, Helvetica, sans-serif;
+     
+      width: 30%;
+    
+   
+        border : 1px solid white;
+  
+
+    
+
+    
+    padding: 30px;
 
 
+
+    
+
+    font-family: 'Open Sans Condensed', arial, sans;
+   
+   
+    background: #FFFFFF;
+    
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+
+   /* font: 16px Arial, Helvetica, sans-serif;
+*/
+
+}
+
+.user_media {
+
+     flex-grow: 1;
+
+    display: flex;
+
+    flex-direction: column;
+
+   
+    margin-left: 30px;
+
+}
+
+#cover_photo {
+
+    background-color: black;
+    width: 100%;
+    height: 100%;
 }
 
 
@@ -107,10 +183,24 @@ div.people{
     border-radius: 10px;
      width:500px;
     }
+
+    #photo_show {
+       
+        background-image: url("default_cover.jpg");
+        height: 300px;
+        padding-top: 20px;
+
+    }
    
-  .photo  img {
-    width: 300px;
-    height: 300px;
+   #photo_show img {
+
+    position: relative;
+    /*float: bottom;*/
+    top: 100px;
+    width: 200px;
+    height: 200px;
+
+    border-radius: 50px;
    
     
     border: 1px solid grey;
@@ -120,6 +210,24 @@ div.people{
     transition: 0.3s;
 
     
+}
+
+#photo  img {
+
+     top: 100px;
+    width: 200px;
+    height: 200px;
+
+    border-radius: 50px;
+   
+    
+    border: 1px solid grey;
+    
+
+        cursor: pointer;
+    transition: 0.3s;
+
+
 }
 
 
@@ -162,7 +270,7 @@ div.people{
 }
 
 
-.user_profile {
+/*.user_profile {
     
     border : 1px solid white;
     display: flex;
@@ -189,46 +297,53 @@ div.people{
     -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
 
 }
-
+*/
 #user_name {
-        font-family: times, Times New Roman, times-roman, georgia, serif;
+        /*font-family: times;*/
  color: black;
  margin: 0;
  padding: 0px 0px 6px 0px;
  font-size: 40px;
  line-height: 44px;
- letter-spacing: -2px;
+ letter-spacing: 3px;
  font-weight: bold;
  margin-bottom: 6px;
 }
 
 #user_bio  {
-     font-family: Gill Sans, Verdana;
- font-size: 18px;
+   /*  font-family: Gill Sans, Verdana;*/
+ font-size: 13px;
  line-height: 14px;
  text-transform: uppercase;
  letter-spacing: 1px;
  font-weight: bold;
  color: black;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
 }
 
 #user_description {
 
-         font-family: Georgia, Serif;
- font-size: 16px;
- line-height: 18px;
+         /*font-family: Georgia, Serif;*/
+ font-size: 13px;
+ line-height: 14px;
 
  letter-spacing: 0.5px;
  
  color: black;
   margin-bottom: 6px;
-  font-weight: bold;
+  
+      font-weight: 500;
+    font-style: italic;
+    
+    font-family: -webkit-pictograph;
+    font-variant: normal;
+    -webkit-font-smoothing: auto;
 
  }
 
  .links {
     display: flex;
+    flex-direction: column;
     width: 20%;
     justify-content: space-between;
 
@@ -260,6 +375,8 @@ div.people{
     background-color: none;
  }
 
+ 
+
 
 
 
@@ -279,7 +396,7 @@ div.people{
 }
 
 /* Modal Content (image) */
-.modal-content {
+.modal-content , #edit{
     margin: auto;
     display: block;
     width: 80%;
@@ -302,7 +419,7 @@ div.people{
 }
 
 /* Add Animation */
-.modal-content, #caption {    
+.modal-content, #caption, #edit{    
     -webkit-animation-name: zoom;
     -webkit-animation-duration: 0.6s;
     animation-name: zoom;

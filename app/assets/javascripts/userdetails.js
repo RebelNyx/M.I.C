@@ -20,6 +20,9 @@ var captionText = $("#caption");
 
 
 
+
+
+
    $("#image").on("click" , function(){
 
 

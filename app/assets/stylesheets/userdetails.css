@@ -186,7 +186,7 @@ div.people{
 
     #photo_show {
        
-        background-image: url("default_cover.jpg");
+        background-image: url("defocussed.jpg");
         height: 300px;
         padding-top: 20px;
 
@@ -462,6 +462,8 @@ justify-content: center;
 }
 
  div.follow div{
+
+    background-color: white;
     
 flex-direction: column;
     display: flex;

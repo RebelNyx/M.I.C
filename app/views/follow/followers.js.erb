@@ -1,0 +1,23 @@
+console.log("Followers");
+
+var modal=  $('#myModal');
+
+var modalImg = $("#img01");
+var captionText = $("#caption");
+
+ modalImg.css("display" , "none");
+    captionText.html("")
+
+ modal.css("display" , "block");
+
+ $('#form_show').html("<%= j (render 'follow/followers') %>")
+
+
+// Get the <span> element that closes the modal
+var span = $('#close');
+
+// When the user clicks on <span> (x), close the modal
+span.on('click',function(){
+
+  modal.css("display" , "none");
+});

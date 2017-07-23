@@ -8,7 +8,7 @@ class FollowController < ApplicationController
   		FollowerMapping.create(:followee_id => followee_id, :follower_id => current_user.id)
   	else
   	end
-  	return redirect_to '/users'
+  	return redirect_to :back
   end
 
   def unfollow
@@ -17,18 +17,23 @@ class FollowController < ApplicationController
   		FollowerMapping.where(:followee_id => followee_id, :follower_id => current_user.id).first.destroy
   	else
   	end
-  	return redirect_to '/users'
+  	return redirect_to :back
   end
 
   def followers 
 
-    @followers = User.find(current_user.follower_ids);
+    user = User.find(params[:id])
+
+
+    @followers = User.find(user.follower_ids);
 
 end
 
  def following
 
-  @following = User.find(current_user.followee_ids);
+  user = User.find(params[:id])
+
+  @following = User.find(user.followee_ids);
 
   end
 

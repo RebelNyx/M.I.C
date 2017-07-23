@@ -1,0 +1,15 @@
+console.log("EDIT");
+
+var modal=  $('#myModal');
+
+var modalImg = $("#img01");
+var captionText = $("#caption");
+
+ modalImg.attr("src" ,"");
+    captionText.html("")
+
+ modal.css("display" , "block");
+
+ $('#form_show').html("<%= j (render 'edit') %>")
+
+

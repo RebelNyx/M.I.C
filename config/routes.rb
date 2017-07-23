@@ -13,6 +13,8 @@ Rails.application.routes.draw do
   get '/users' => 'userdetails#users'
   post '/follow' => 'follow#follow'
   post '/unfollow' => 'follow#unfollow'
+  get '/followers' => 'follow#followers'
+  get '/following' => 'follow#following'
 
   root 'userdetails#new'
 

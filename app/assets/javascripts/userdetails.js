@@ -29,7 +29,9 @@ var captionText = $("#caption");
         modal.css("display" , "block");
     modalImg.attr("src" , this.src)
     captionText.html(this.alt);
+    modalImg.css("display" , "block");
     $("#form_show").html("");
+
    });
 
  

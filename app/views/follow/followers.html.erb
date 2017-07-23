@@ -1,0 +1,66 @@
+<div class ="follow">
+
+
+<div>
+<h2>Followers</h2>
+
+<hr>
+<br>
+<% @followers.each do |user| %>
+ <% if user.profile_photo %>
+
+<img src ="/uploads/<%= user.profile_photo %>" >
+<% else %>
+
+<img src="<%= asset_path('default.png') %>">
+<% end %>
+
+<b><%= user.first_name + user.last_name %></b>@<%= user.username %>
+
+<% if current_user.can_follow(user.id) %>
+
+    <%= link_to "Follow", url_for(controller: :follow, action: :follow, followee_id: user.id), method: :post %> 
+<% end %>
+
+
+
+
+
+<% if current_user.can_un_follow(user.id) %>
+
+&#10004;
+
+<%= link_to "UnFollow", url_for(controller: :follow, action: :unfollow, followee_id: user.id), method: :post %>
+
+<% end %>
+
+<% unless user.userdetail.nil? %>
+
+<%= link_to "profile" ,
+ url_for(controller: :userdetails, action: :show, id: user.userdetail.id), method: :get %>
+
+<% end %>
+
+
+
+
+
+
+
+
+<hr>
+<br>
+
+
+
+
+
+
+
+
+
+
+
+<% end %>
+</div>
+</div>

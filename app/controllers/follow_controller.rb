@@ -20,4 +20,17 @@ class FollowController < ApplicationController
   	return redirect_to '/users'
   end
 
+  def followers 
+
+    @followers = User.find(current_user.follower_ids);
+
 end
+
+ def following
+
+  @following = User.find(current_user.followee_ids);
+
+  end
+
+end
+

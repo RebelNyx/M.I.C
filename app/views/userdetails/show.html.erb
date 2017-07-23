@@ -51,7 +51,7 @@ remote: true %> </li>
 
 <% else %>
 
-<img src="default.png">
+<img src="<%= asset_path('default.png') %>">
 
 <% end %>
 </div>
@@ -152,9 +152,9 @@ Find me here !!
 
 <div class="user_media">
 
-<div id ="follow">
-<h3>Followers : <%= @userdetail.user.followers_count %>
-Following : <%= @userdetail.user.followees_count %></h3>
+<div id ="follow_show">
+<h3><%= link_to "Followers",followers_path %> : <%= @userdetail.user.followers_count %>
+<%= link_to "Following",following_path %> : <%= @userdetail.user.followees_count %></h3>
 </div>
 
   

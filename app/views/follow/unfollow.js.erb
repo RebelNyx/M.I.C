@@ -1,0 +1,14 @@
+
+console.log("unfollow");
+
+var unfollow = $("#unfollow_<%= @followee_id %>").html();
+
+console.log(unfollow);
+
+if (unfollow === "UnFollow")
+
+	$("#unfollow_<%= @followee_id %>").html("Follow");
+
+else
+ 
+ $("#unfollow_<%= @followee_id %>").html("UnFollow");

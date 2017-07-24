@@ -7,10 +7,16 @@ console.log("follow");
 <% if @follow %>
 
 	$("#follow_<%= @followee_id %>").html("UnFollow");
+	$("#follow_show").load(location.href + " #follow_show"); 
+	// reload particular div using window loacation object alia of ajax
+	// ajax url () , datatype:html succesee .html(html) imp ajax static
+	//for dynamic use render
 
 <% else %>
  
  $("#follow_<%= @followee_id %>").html("Follow");
+
+ $("#follow_show").load(location.href + " #follow_show");
 
  <% end %>
 

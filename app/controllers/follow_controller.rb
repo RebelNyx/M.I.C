@@ -23,6 +23,7 @@ class FollowController < ApplicationController
 
   def followers 
 
+
     user = User.find(params[:id])
 
 

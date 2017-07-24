@@ -41,11 +41,13 @@ def follow_relation user_id
 
   def followee_ids
 
+
   	FollowerMapping.where(follower_id: id).pluck(:followee_id)
 
   end
 
    def follower_ids
+
 
     FollowerMapping.where(followee_id: id).pluck(:follower_id)
 

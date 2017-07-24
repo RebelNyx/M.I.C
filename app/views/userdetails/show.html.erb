@@ -153,10 +153,13 @@ Find me here !!
 <div class="user_media">
 
 <div id ="follow_show">
+
 <h3><%= link_to "Followers",url_for(controller: :follow, action: :followers , id: @userdetail.user.id), 
 remote: true  %> : <%= @userdetail.user.followers_count %>
+
 <%= link_to "Following",url_for(controller: :follow, action: :following , id: @userdetail.user.id), 
 remote: true   %> : <%= @userdetail.user.followees_count %></h3>
+
 </div>
 
   

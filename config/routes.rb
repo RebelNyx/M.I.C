@@ -11,8 +11,8 @@ Rails.application.routes.draw do
 
   get '/home' => "home#index"
   get '/users' => 'userdetails#users'
-  post '/follow' => 'follow#follow'
-   post '/unfollow' => 'follow#unfollow'
+  post '/follow' => 'follow#follow_toggle'
+  
  
   get '/followers' => 'follow#followers'
   get '/following' => 'follow#following'

@@ -19,7 +19,7 @@
 
 <% if current_user.can_follow(user.id) %>
 
-    <%= link_to "Follow", url_for(controller: :follow, action: :follow, followee_id: user.id), method: :post , remote: true, id: "follow_#{ user.id }"%> 
+    <%= link_to "Follow", url_for(controller: :follow, action: :follow_toggle, followee_id: user.id), method: :post , remote: true, id: "follow_#{ user.id }"%> 
 <% end %>
 
 
@@ -28,9 +28,9 @@
 
 <% if current_user.can_un_follow(user.id) %>
 
-&#10004;
 
-<%= link_to "UnFollow", url_for(controller: :follow, action: :unfollow, followee_id: user.id), method: :post , remote: true, id: "unfollow_#{ user.id }"%> 
+
+<%= link_to "UnFollow", url_for(controller: :follow, action: :follow_toggle, followee_id: user.id), method: :post , remote: true, id: "follow_#{ user.id }"%> 
 
 <% end %>
 

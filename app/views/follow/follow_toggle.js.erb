@@ -1,0 +1,19 @@
+console.log("follow");
+
+// var follow = $("#follow_<%= @followee_id %>").html();
+
+// console.log(follow);
+
+<% if @follow %>
+
+	$("#follow_<%= @followee_id %>").html("UnFollow");
+
+<% else %>
+ 
+ $("#follow_<%= @followee_id %>").html("Follow");
+
+ <% end %>
+
+
+
+

@@ -391,12 +391,12 @@ div.people{
     width: 100%; /* Full width */
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    background-color: white; /* Fallback color */
+    background-color: rgba(128,128,128,0.8); /* Black w/ opacity */
 }
 
 /* Modal Content (image) */
-.modal-content , #edit{
+.modal-content {
     margin: auto;
     display: block;
     width: 80%;
@@ -419,7 +419,7 @@ div.people{
 }
 
 /* Add Animation */
-.modal-content, #caption, #edit{    
+.modal-content, #caption{    
     -webkit-animation-name: zoom;
     -webkit-animation-duration: 0.6s;
     animation-name: zoom;
@@ -454,35 +454,58 @@ div.people{
     cursor: pointer;
 }
 
-div.follow{
-display: flex;
-justify-content: center;
+.follow_user {
+  
+  background-color: white;
+  width: 50%;
+ display: flex;
+ flex-direction: column;
+ margin: auto;
+
 
 
 }
 
- div.follow div{
 
-    background-color: white;
-    
-flex-direction: column;
+.follow_user header span {
+
+
+
+        font-family: monospace;
+    font-size: 25px;
+    font-variant: small-caps;
+    font-weight: bold;
+    color: blanchedalmond;
+        
+
+
+}
+.follow_user_show {
+
+    border-bottom: 1px solid grey;
+
+    padding: 10px;
+
+    margin: 10px;
+}
+
+.follow_user_show > div {
+
     display: flex;
-    justify-content: center;
-
-
-    padding: 20px;
-     border-style: solid;
-    border-width: 1px;
-    
-    width:500px;
-    }
-
-div.follow div img{
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
+    flex-direction: column;
 }
 
+.follow_user_show img {
+
+    width: 100px;
+    height: 100px;
+    border-radius: 25px;
+}
+
+.follow_button {
+
+    float: right;
+}
 
 
 

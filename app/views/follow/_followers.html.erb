@@ -1,12 +1,19 @@
-<div class ="follow">
 
+<div class ="follow_user">
+<header>
+<span>
+Followers
+</span>
+
+</header>
+
+
+<% @followers.each do |user| %>
+
+<div class="follow_user_show">
 
 <div>
-<h2>Followers</h2>
 
-<hr>
-<br>
-<% @followers.each do |user| %>
  <% if user.profile_photo %>
 
 <img src ="/uploads/<%= user.profile_photo %>" >
@@ -15,11 +22,23 @@
 <img src="<%= asset_path('default.png') %>">
 <% end %>
 
-<b><%= user.first_name + user.last_name %></b>@<%= user.username %>
+<b>
+<%= user.first_name + user.last_name %>
+</b>
 
+
+<% unless user.userdetail.nil? %>
+
+<%= link_to "@#{user.username }" ,
+ url_for(controller: :userdetails, action: :show, id: user.userdetail.id), method: :get %>
+
+<% end %>
+</div>
+
+<span class="follow_button">
 <% if current_user.can_follow(user.id) %>
 
-    <%= link_to "Follow", url_for(controller: :follow, action: :follow_toggle, followee_id: user.id), method: :post , remote: true, id: "follow_#{ user.id }"%> 
+    <%= button_to "Follow", url_for(controller: :follow, action: :follow_toggle, followee_id: user.id), method: :post , remote: true, id: "follow_#{ user.id }"%> 
 <% end %>
 
 
@@ -30,37 +49,15 @@
 
 
 
-<%= link_to "UnFollow", url_for(controller: :follow, action: :follow_toggle, followee_id: user.id), method: :post , remote: true, id: "follow_#{ user.id }"%> 
+<%= button_to "UnFollow", url_for(controller: :follow, action: :follow_toggle, followee_id: user.id), method: :post , remote: true, id: "follow_#{ user.id }"%> 
 
 <% end %>
+</span>
 
-<% unless user.userdetail.nil? %>
-
-<%= link_to "profile" ,
- url_for(controller: :userdetails, action: :show, id: user.userdetail.id), method: :get %>
-
-<% end %>
-
-
-
-
-
-
-
-
-<hr>
-<br>
-
-
-
-
-
-
-
-
-
-
-
-<% end %>
 </div>
+
+<% end %>
+
+
+
 </div>

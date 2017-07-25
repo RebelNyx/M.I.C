@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   
   
+  resources :posts , only: [:create , :destroy ]
   resources :userdetails , only: [:create , :new, :show, :edit , :update, :users ]
   
   devise_for :users

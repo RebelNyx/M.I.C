@@ -1,0 +1,3 @@
+console.log("post");
+$("#post_content").val(" ");
+$("#post_show").prepend("<%= escape_javascript ( render 'userdetails/post_show', post: @post) %>");

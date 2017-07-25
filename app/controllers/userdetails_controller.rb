@@ -34,6 +34,10 @@ class UserdetailsController < ApplicationController
   # GET /userdetails/1
   # GET /userdetails/1.json
   def show
+
+    @post = Post.new
+    @post_show = @userdetail.user.posts.order(created_at: :desc)
+
   end
 
   # GET /userdetails/new

@@ -1,0 +1,29 @@
+
+
+<div class="post_area">
+
+ <div class="real_post_area">
+
+  <div class = "who_post">
+
+  <%= render 'userdetails/profile' %>
+
+  <div class="who">
+
+  <strong><%= current_user.first_name + current_user.last_name %></strong>
+<br>
+  <%= current_user.userdetail.bio %>
+
+  </div>
+
+  </div>
+
+<%= post.content %><br>
+
+</div>
+
+  <%= button_to "Delete", url_for(controller: :posts, action: :destroy, id: post.id), 
+  remote: true , method: :delete %> 
+
+</div>
+

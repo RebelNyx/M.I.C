@@ -1,0 +1,80 @@
+<%= form_for @post, remote: true do |f|  %>
+  <% if @post.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @post.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="post_area">
+
+  <div class = "fake_post_area">
+
+  <span>
+
+  Share your views(Click Here) !!
+
+  </span>
+
+  </div>
+
+  <div class="real_post_area">
+
+  <div class = "who_post">
+
+  <%= render 'userdetails/profile' %>
+
+  <div class="who">
+
+  <strong><%= current_user.first_name + current_user.last_name %></strong>
+<br>
+  <%= current_user.userdetail.bio %>
+
+  </div>
+
+  </div>
+
+  <div class="post_field">
+    
+    <%= f.text_area :content , placeholder: "Write Here" %>
+
+    </div>
+
+    </div>
+ 
+
+  <div class="post_it">
+    <%= f.submit %>
+  </div>
+
+   </div>
+<% end %>
+
+<script type="text/javascript">
+
+
+
+var real_post = $(".real_post_area");
+
+var fake_post = $(".fake_post_area");
+
+  
+  real_post.hide();
+
+  fake_post.on("click" , function(){
+  
+
+  fake_post.hide();
+
+  real_post.show();
+
+  });
+
+
+
+</script>

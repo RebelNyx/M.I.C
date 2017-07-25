@@ -44,7 +44,9 @@ flex-direction: column;
 }
 
 
-.user_detail , .user_media{     
+
+
+.user_detail {     
 
 
 
@@ -81,8 +83,9 @@ flex-direction: column;
 }
 
 .user_media {
+ 
 
-     flex-grow: 1;
+   width: 60%;
 
     display: flex;
 
@@ -92,6 +95,8 @@ flex-direction: column;
     margin-left: 30px;
 
 }
+
+
 
 #cover_photo {
 

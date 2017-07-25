@@ -152,13 +152,34 @@ Find me here !!
 
 <div class="user_media">
 
-<div id ="follow_show">
+<!-- <div id ="follow_show">
 
 <h3><%= link_to "Followers",url_for(controller: :follow, action: :followers , id: @userdetail.user.id), 
 remote: true  %> : <%= @userdetail.user.followers_count %>
 
 <%= link_to "Following",url_for(controller: :follow, action: :following , id: @userdetail.user.id), 
 remote: true   %> : <%= @userdetail.user.followees_count %></h3>
+
+</div> -->
+
+<div id ="posts">
+
+
+<%= render 'new_post' %>
+
+
+</div>
+
+<div id = "post_show">
+
+<% @post_show.each do |post| %>
+
+
+
+<%= render "post_show" , post: post  %>
+
+
+<% end %>
 
 </div>
 
@@ -178,6 +199,21 @@ remote: true   %> : <%= @userdetail.user.followees_count %></h3>
 var update_list = $(".update");
 
 list.append(update_list);
+
+
+// $.ajax( {
+
+//   url: "/posts/new",
+
+//   datatype: "html",
+
+//   success: function(data){
+
+//    $("#posts").html(data);
+
+
+//   }
+
 
   });
 

@@ -11,6 +11,8 @@ class User < ActiveRecord::Base
 
          has_one :userdetail , dependent: :destroy
 
+         has_many :posts , dependent: :destroy
+
 
 def follow_relation user_id
 
@@ -73,6 +75,16 @@ def follow_relation user_id
   	NOTFOLLOWED = 2
 
   end
+
+  def user_posts user_id
+
+    user = User.find(user_id)
+
+    user.posts
+
+  end
+
+
 
          
 

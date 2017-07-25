@@ -26,6 +26,8 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
+    if @post.user == current_user
+
     @post = Post.new(post_params)
 
     @post.user_id = current_user.id
@@ -41,6 +43,9 @@ class PostsController < ApplicationController
         format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end
+
+  end
+  
   end
 
   # PATCH/PUT /posts/1
@@ -61,6 +66,8 @@ class PostsController < ApplicationController
   # DELETE /posts/1.json
   def destroy
 
+    if @post.user == current_user
+
     
     @post.destroy
 
@@ -70,6 +77,9 @@ class PostsController < ApplicationController
       format.js {}
       format.json { head :no_content }
     end
+
+  end
+
   end
 
   private

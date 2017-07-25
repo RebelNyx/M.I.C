@@ -6,13 +6,25 @@
 
   <div class = "who_post">
 
-  <%= render 'userdetails/profile' %>
+
+ <div id ="photo">
+
+  <% if current_user.profile_photo %>
+
+<img   src="/uploads/<%= userdetail.user.profile_photo %>" alt="<%= userdetail.user.first_name %>"  >
+
+<% else %>
+
+<img src="<%= asset_path('default.png') %>">
+
+<% end %>
+</div>
 
   <div class="who">
 
-  <strong><%= current_user.first_name + current_user.last_name %></strong>
+  <strong><%= userdetail.user.first_name + userdetail.user.last_name %></strong>
 <br>
-  <%= current_user.userdetail.bio %>
+  <%= userdetail.bio %>
 
   </div>
 
@@ -22,8 +34,12 @@
 
 </div>
 
+<% if post.user == current_user %>
+
   <%= button_to "Delete", url_for(controller: :posts, action: :destroy, id: post.id), 
   remote: true , method: :delete %> 
+
+  <% end %>
 
 </div>
 

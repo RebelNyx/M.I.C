@@ -162,6 +162,9 @@ remote: true   %> : <%= @userdetail.user.followees_count %></h3>
 
 </div> -->
 
+
+<% if @userdetail.user == current_user %>
+
 <div id ="posts">
 
 
@@ -170,13 +173,15 @@ remote: true   %> : <%= @userdetail.user.followees_count %></h3>
 
 </div>
 
+<% end %>
+
 <div id = "post_show">
 
 <% @post_show.each do |post| %>
 
 
 
-<%= render "post_show" , post: post  %>
+<%= render "post_show" , { post: post , userdetail: @userdetail } %>
 
 
 <% end %>

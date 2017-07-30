@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170725103148) do
+ActiveRecord::Schema.define(version: 20170730152025) do
 
   create_table "follower_mappings", force: :cascade do |t|
     t.integer  "follower_id"
@@ -19,6 +19,40 @@ ActiveRecord::Schema.define(version: 20170725103148) do
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end
+
+  create_table "jampad_details", force: :cascade do |t|
+    t.integer  "no_of_guitar_amps",   null: false
+    t.integer  "no_of_bass_amps",     null: false
+    t.integer  "no_of_keyboard_amps", null: false
+    t.integer  "no_of_microphone",    null: false
+    t.integer  "drumkit",             null: false
+    t.integer  "sound_system",        null: false
+    t.string   "guitar_amps_d"
+    t.string   "bass_amps_d"
+    t.string   "keyboard_amps_d"
+    t.string   "microphone_d"
+    t.string   "drumkit_d"
+    t.string   "sound_system_d"
+    t.integer  "jampad_id"
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
+  end
+
+  add_index "jampad_details", ["jampad_id"], name: "index_jampad_details_on_jampad_id"
+
+  create_table "jampads", force: :cascade do |t|
+    t.string   "Full_Name",   null: false
+    t.string   "Email",       null: false
+    t.string   "Phone",       null: false
+    t.string   "Jampad_Name", null: false
+    t.string   "city",        null: false
+    t.string   "state",       null: false
+    t.integer  "user_id"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  add_index "jampads", ["user_id"], name: "index_jampads_on_user_id"
 
   create_table "posts", force: :cascade do |t|
     t.text     "content",    null: false

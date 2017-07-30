@@ -13,6 +13,8 @@ class User < ActiveRecord::Base
 
          has_many :posts , dependent: :destroy
 
+         has_many :jampads , dependent: :destroy
+
 
 def follow_relation user_id
 

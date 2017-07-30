@@ -38,9 +38,10 @@ body {
     }
 
 header{
-
-    padding-left: 30px;
-    padding-right: 30px;
+    
+    
+    padding-left: 60px;
+    padding-right: 10px;
     height: 60px;
     display: flex;
     align-items: center;
@@ -59,10 +60,10 @@ header{
 body div.name{
 
     color: white;
-font-family: monospace;
+    font-family: monospace;
     font-size: 24px;
     font-style: normal;
-    font-variant: normal;
+    font-variant: normal;x
     font-weight: 500;
     line-height: 26.4px; 
 }

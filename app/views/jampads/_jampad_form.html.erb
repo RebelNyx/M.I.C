@@ -1,0 +1,62 @@
+<%= form_for @jampad do |f|  %>
+  <% if @jampad.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@jampad.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @jampad.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+  <div class="">
+    
+    <%= f.text_field :Full_Name , placeholder: "Full Name" %>
+
+    </div>
+
+     <div class="">
+    
+    <%= f.text_field :Email , placeholder: "Email" %>
+
+    </div>
+
+     <div class="">
+    
+    <%= f.text_field :Phone , placeholder: "Phone" %>
+
+    </div>
+
+     <div class="">
+    
+    <%= f.text_field :Jampad_Name , placeholder: "Jampad Name" %>
+
+    </div>
+
+       <div class="">
+    
+    <%= f.text_field :city, placeholder: "City" %>
+
+    </div>
+
+       <div class="">
+    
+    <%= f.text_field :state , placeholder: "state" %>
+
+    </div>
+
+  
+ 
+
+  <div class="">
+    <%= f.submit %>
+  </div>
+
+   </div>
+<% end %>
+
+

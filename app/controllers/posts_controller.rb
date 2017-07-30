@@ -26,16 +26,22 @@ class PostsController < ApplicationController
   # POST /posts
   # POST /posts.json
   def create
-    if @post.user == current_user
+   
 
     @post = Post.new(post_params)
 
     @post.user_id = current_user.id
 
+     @userdetail = @post.user.userdetail
+
     respond_to do |format|
       if @post.save
         # format.html { redirect_to :back, notice: 'Post was successfully created.' }
-         format.js{ }
+         format.js{
+           
+
+
+          }
         # format.json { render :show, status: :created, location: @post }
       else
         format.html { redirect_to :back } # bug need to be solved
@@ -44,7 +50,7 @@ class PostsController < ApplicationController
       end
     end
 
-  end
+
   
   end
 

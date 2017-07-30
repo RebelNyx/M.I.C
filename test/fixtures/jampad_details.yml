@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  no_of_guitar_amps: 
+  no_of_bass_amps: 
+  no_of_keyboard_amps: 
+  no_of_microphone: 
+  drumkit: 
+  sound_system: 
+  guitar_amps_d: MyString
+  bass_amps_d: MyString
+  keyboard_amps_d: MyString
+  microphone_d: MyString
+  drumkit_d: MyString
+  sound_system_d: MyString
+  jampad_id: 
+
+two:
+  no_of_guitar_amps: 
+  no_of_bass_amps: 
+  no_of_keyboard_amps: 
+  no_of_microphone: 
+  drumkit: 
+  sound_system: 
+  guitar_amps_d: MyString
+  bass_amps_d: MyString
+  keyboard_amps_d: MyString
+  microphone_d: MyString
+  drumkit_d: MyString
+  sound_system_d: MyString
+  jampad_id: 

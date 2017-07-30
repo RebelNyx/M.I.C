@@ -1,6 +1,20 @@
 Rails.application.routes.draw do
   
   
+  post 'jampad_details' => 'jampad_details#create_jampad_details'
+
+  get 'details' => 'jampad_details#details'
+
+  get 'jampad_home' => 'jampads#jampad_home'
+
+  get 'jampads/partner_with_us'
+
+  post 'jampads' => 'jampads#create_partner'
+
+  get 'jampad_show/:id' => 'jampads#jampad_show'
+
+
+
   resources :posts , only: [:create , :destroy ]
   resources :userdetails , only: [:create , :new, :show, :edit , :update, :users ]
   

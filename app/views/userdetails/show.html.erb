@@ -28,7 +28,11 @@ remote: true %> </li>
  url_for(controller: :userdetails , action: :show , id: current_user.userdetail.id), method: :get %></li>
  <li  id= "signout"><%= link_to "Sign Out",destroy_user_session_path,method: :delete %></li>
 
+<li>
+  
+  <%= link_to 'Jampads' , url_for(controller: :jampads , action: :jampad_home) , method: :get  %> </li>
 
+</li>
 
 
 </div>
@@ -152,7 +156,7 @@ Find me here !!
 
 <div class="user_media">
 
-<!-- <div id ="follow_show">
+ <div id ="follow_show">
 
 <h3><%= link_to "Followers",url_for(controller: :follow, action: :followers , id: @userdetail.user.id), 
 remote: true  %> : <%= @userdetail.user.followers_count %>
@@ -160,8 +164,7 @@ remote: true  %> : <%= @userdetail.user.followers_count %>
 <%= link_to "Following",url_for(controller: :follow, action: :following , id: @userdetail.user.id), 
 remote: true   %> : <%= @userdetail.user.followees_count %></h3>
 
-</div> -->
-
+</div> 
 
 <% if @userdetail.user == current_user %>
 

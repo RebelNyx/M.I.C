@@ -7,6 +7,9 @@ Rails.application.routes.draw do
 
   get 'jampad_home' => 'jampads#jampad_home'
 
+  
+
+
   get 'jampads/partner_with_us'
 
   post 'jampads' => 'jampads#create_partner'

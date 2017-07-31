@@ -22,6 +22,7 @@ end
 
 
   def jampad_home
+    @jampads=Jampad.all
   end
 
   def partner_with_us

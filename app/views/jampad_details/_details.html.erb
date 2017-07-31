@@ -1,4 +1,4 @@
-<%= form_for @detail do |f|  %>
+<%= form_for @detail , remote: true do |f|  %>
   <% if @detail.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@detail.errors.count, "error") %> prohibited this post from being saved:</h2>
@@ -18,7 +18,7 @@
 
   <div class="edit_field">
     
-    <%= f.text_field :no_of_guitar_amps , placeholder: "How Many Guitar Amps You Have ?" %>
+    <%= f.number_field :no_of_guitar_amps , min: 0 , placeholder: "How Many Guitar Amps You Have ?" %>
 
     </div>
 
@@ -30,7 +30,7 @@
 
      <div class="edit_field">
     
-    <%= f.text_field :no_of_bass_amps , placeholder: "How Many Bass Amps You Have ?" %>
+    <%= f.number_field :no_of_bass_amps , min: 0 , placeholder: "How Many Bass Amps You Have ?" %>
 
     </div>
 
@@ -42,7 +42,7 @@
 
        <div class="edit_field">
     
-    <%= f.text_field :no_of_keyboard_amps, placeholder: "How Many Keyboard Amps You Have ?" %>
+    <%= f.number_field :no_of_keyboard_amps  , min: 0 , placeholder: "How Many Keyboard Amps You Have ?" %>
 
     </div>
 
@@ -57,7 +57,7 @@
 
        <div class="edit_field">
 
-        <%= f.text_field :no_of_microphone , placeholder: "How Many Microphone  You Have ?" %>
+        <%= f.number_field :no_of_microphone , min: 0 , placeholder: "How Many Microphone  You Have ?" %>
     
    
 
@@ -71,7 +71,7 @@
 
           <div class="edit_field">
     
-    <%= f.text_field :drumkit , placeholder: "How Many Drum Kits You Have ?" %>
+    <%= f.number_field :drumkit , min: 0 , placeholder: "How Many Drum Kits You Have ?" %>
     </div>
 
           <div class="edit_field">
@@ -82,7 +82,7 @@
 
           <div class="edit_field">
     
-    <%= f.text_field :sound_system , placeholder: "How Many Sound Systems You Have ?" %>
+    <%= f.number_field :sound_system , min: 0 , placeholder: "How Many Sound Systems You Have ?" %>
 
     </div>
 

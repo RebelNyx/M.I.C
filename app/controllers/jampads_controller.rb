@@ -1,24 +1,8 @@
 class JampadsController < ApplicationController
 
-     before_action :authenticate_user!
+     before_action :authenticate_user! , except: [:jampad_home]
 
-    before_action :check , only: [:partner_with_us]
-
-
-   def check 
-
-   	if current_user.jampads.first
-
-   		redirect_to '/details'
-
-   	end
-   	
-
-end
-
-
-
-
+       before_action :show, only: [:jampad_show]
 
 
   def jampad_home
@@ -33,22 +17,30 @@ end
   end
 
   def jampad_show
+  
+  @detail = @jampad.jampad_detail
+
   end
 
 
   def create_partner
 
-   
+@detail =  JampadDetail.new
+
+
   	   @jampad = Jampad.new(jampad_params)
 
     @jampad.user_id = current_user.id
 
     respond_to do |format|
       if @jampad.save
-        format.html { redirect_to '/details' , notice: 'Userdetail was successfully created.' }
+
+        
+
+        format.js {  @save = true }
        
       else
-        format.html { render 'jampads/partner_with_us' }
+        format.js { @save = false }
      
       end
     end
@@ -63,8 +55,15 @@ private
 
 
     def jampad_params
-      params.require(:jampad).permit(:Full_Name, :Email, :Phone, :Jampad_Name, :city, :state)
+      params.require(:jampad).permit(:Email, :Phone, :Jampad_Name, :city, :state)
     end
+
+    def show 
+
+      @jampad = Jampad.find(params[:id])
+
+    end
+
 
 
 end

@@ -34,6 +34,8 @@ class PostsController < ApplicationController
 
      @userdetail = @post.user.userdetail
 
+     if @post.user == current_user
+
     respond_to do |format|
       if @post.save
         # format.html { redirect_to :back, notice: 'Post was successfully created.' }
@@ -48,6 +50,8 @@ class PostsController < ApplicationController
 
         format.json { render json: @post.errors, status: :unprocessable_entity }
       end
+    end
+    
     end
 
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170730152025) do
+ActiveRecord::Schema.define(version: 20170731192732) do
 
   create_table "follower_mappings", force: :cascade do |t|
     t.integer  "follower_id"
@@ -41,7 +41,6 @@ ActiveRecord::Schema.define(version: 20170730152025) do
   add_index "jampad_details", ["jampad_id"], name: "index_jampad_details_on_jampad_id"
 
   create_table "jampads", force: :cascade do |t|
-    t.string   "Full_Name",   null: false
     t.string   "Email",       null: false
     t.string   "Phone",       null: false
     t.string   "Jampad_Name", null: false

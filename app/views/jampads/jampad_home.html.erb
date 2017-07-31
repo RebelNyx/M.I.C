@@ -1,7 +1,18 @@
 
 
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close" id="close">×</span>
+ 
 
-<%= link_to 'Partner With Us' , url_for(controller: :jampads , action: :partner_with_us ) , method: :get %>
+  <div id="form_show"> </div>
+ 
+  
+</div>
+
+
+
+<%= link_to 'Partner With Us' , url_for(controller: :jampads , action: :partner_with_us ) , method: :get , remote: true %>
 
 <br>
 

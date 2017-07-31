@@ -1,23 +1,6 @@
 class JampadDetailsController < ApplicationController
 
-
-
-	     before_action :authenticate_user!
-
-    before_action :check , only: [:details]
-
-
-       def check 
-
-   	if current_user.jampads.first.jampad_detail
-
-   		redirect_to '/jampad_home'
-
-   	end
-   	
-
-end
-
+ before_action :authenticate_user!
 
   def create_jampad_details
 
@@ -30,7 +13,7 @@ end
         format.html { redirect_to '/jampad_home' , notice: 'Userdetail was successfully created.' }
        
       else
-        format.html { render :details }
+        format.js {  }
      
       end
     end

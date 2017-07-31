@@ -210,7 +210,7 @@ div.edit_authentication {
 .field input[type="email"],.edit_field input[type="email"],
 .field input[type="password"], .edit_field input[type="password"],
 .field input[type="text"], .edit_field input[type="text"],
-.field select , .edit_field select {
+.field select , .edit_field select , .edit_field input[type= "number"] {
     display: block;
     box-sizing: border-box;
     margin-bottom: 7px;
@@ -303,26 +303,7 @@ input[type="submit"]:hover{
     justify-content: space-between;
 
 }
-.jampad-reg {
 
-    opacity: 1;
-    
-     position: relative;
-    
-    display: flex;
-    flex-direction: column;
-   width:350px;
-    padding:30px; 
-    margin:40px auto;
-    background-color: white;
-    
-    border-radius: 10px;
-    -webkit-border-radius:10px;
-    -moz-border-radius: 10px;*/
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
-    -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13);
-    -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.13); 
-}
 
 
 

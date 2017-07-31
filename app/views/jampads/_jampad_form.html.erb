@@ -1,6 +1,6 @@
 
 
-<%= form_for @jampad do |f|  %>
+<%= form_for @jampad , remote: true do |f|  %>
 
 
   <% if @jampad.errors.any? %>
@@ -19,11 +19,7 @@
  <div class="edit_field">
 <h2>Fill details </h2>
 </div>
-  <div class="edit_field">
-    
-    <%= f.text_field :Full_Name , placeholder: "Full Name" %>
 
-    </div>
 
      <div class="edit_field">
     

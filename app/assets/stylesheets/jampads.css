@@ -1,0 +1,37 @@
+	.jampad_desc{
+
+		  position: relative;
+    justify-content: center;
+    
+    padding:10px;
+    
+
+    font-family: 'Open Sans Condensed', arial, sans;
+   
+  
+    background: #FFFFFF;
+  width: 450px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+
+	}
+
+	#jampad_fields{
+		 display: block;
+    box-sizing: border-box;
+    margin-bottom: 7px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    -webkit-border-radius:6px;
+    -moz-border-radius:6px;
+    border: 2px solid #fff;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
+    -moz-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
+    -webkit-box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.33);
+
+
+	}

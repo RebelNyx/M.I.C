@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   
 
 
-  get 'jampads/partner_with_us'
+  post 'jampads/partner_with_us'
 
   post 'jampads' => 'jampads#create_partner'
 

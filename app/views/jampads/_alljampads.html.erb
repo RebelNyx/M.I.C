@@ -13,9 +13,25 @@
 </div>
 <div id =jampad_fields>
 <h3>OWNER'S NAME:</h3>
+<% if j.jampad_detail %>
 
 <%= link_to ( j.user.first_name + j.user.last_name ), url_for(controller: :jampads , action: :jampad_show , id: j.id) , method: :get %>
+
+<% else %>
+<%= j.user.first_name + j.user.last_name %>
+
+
+<% end %>
 </div>
+
+	<% if current_user.id == j.user_id%>
+	<div id =jampad_fields>
+	
+<h2><%= link_to "Manage your Jampad" , url_for(controller: :jampads , action: :partner_with_us ) , method: :post, remote: true %></h2>
+	
+</div>
+
+<% end %>
 
 </div>
 <br>

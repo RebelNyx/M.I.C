@@ -1,6 +1,6 @@
 
 
-<%= form_for @jampad , remote: true do |f|  %>
+<%= form_for @jampad , remote: true , id: "form" do |f|  %>
 
 
   <% if @jampad.errors.any? %>
@@ -62,5 +62,6 @@
    </div>
 
 <% end %>
+
 
 

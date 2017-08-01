@@ -1,1 +1,32 @@
-Guitar Amp(s) : <%= @detail.no_of_guitar_amps %>
+
+<div class = "jampad_desc">
+<div id =jampad_fields>
+Guitar Amp(s) : <%= @detail.no_of_guitar_amps %> ,
+<%= @detail.guitar_amps_d %>
+</div>
+<div id =jampad_fields>
+Bass Amp(s) : <%= @detail.no_of_bass_amps %> ,
+<%= @detail.bass_amps_d %>
+
+</div>
+<div id =jampad_fields>
+Keyboard Amp(s) : <%= @detail.no_of_keyboard_amps %> ,
+	<%= @detail.keyboard_amps_d %>
+
+</div>
+<div id =jampad_fields>
+ Microphones : <%= @detail.no_of_microphone %> ,
+ <%= @detail.microphone_d %>
+
+ </div>
+ <div id =jampad_fields>
+Drum kit : <%= @detail.drumkit %> ,
+<%= @detail.drumkit_d %>
+
+</div>
+<div id =jampad_fields>
+sound system : <%= @detail.sound_system %>
+<%= @detail.sound_system_d %>
+
+</div>
+</div>

@@ -209,7 +209,7 @@ div.edit_authentication {
 
 .field input[type="email"],.edit_field input[type="email"],
 .field input[type="password"], .edit_field input[type="password"],
-.field input[type="text"], .edit_field input[type="text"],
+.field input[type="text"], .edit_field input[type="text"], .edit_field input[type="tel"],
 .field select , .edit_field select , .edit_field input[type= "number"] {
     display: block;
     box-sizing: border-box;

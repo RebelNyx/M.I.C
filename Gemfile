@@ -29,6 +29,10 @@ group :development, :test do
     gem 'railroady'
 end
 
+gem 'countries'
+
+gem 'country_select'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

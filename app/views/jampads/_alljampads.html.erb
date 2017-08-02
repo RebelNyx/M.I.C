@@ -24,10 +24,10 @@
 <% end %>
 </div>
 
-	<% if current_user.id == j.user_id%>
+	<% if current_user== j.user%>
 	<div id =jampad_fields>
 	
-<h2><%= link_to "Manage your Jampad" , url_for(controller: :jampads , action: :partner_with_us ) , method: :post, remote: true %></h2>
+<h2><%= link_to "Manage your Jampad" , url_for(controller: :jampads , action: :jampad_edit , id: j.id ), remote: true %></h2>
 	
 </div>
 

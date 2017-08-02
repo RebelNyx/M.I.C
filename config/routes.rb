@@ -7,10 +7,15 @@ Rails.application.routes.draw do
 
   get 'jampad_home' => 'jampads#jampad_home'
 
+
+  get 'jampads/:id/edit' => 'jampads#jampad_edit'
+
+
   
+      patch 'jampads/:id' => 'jampads#jampad_update'
+     put 'jampads/:id' => 'jampads#jampad_update' 
 
-
-  post 'jampads/partner_with_us'
+  get 'jampads/partner_with_us'
 
   post 'jampads' => 'jampads#create_partner'
 

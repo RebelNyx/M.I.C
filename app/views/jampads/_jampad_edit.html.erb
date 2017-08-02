@@ -1,6 +1,10 @@
 
 
-<%= form_for @jampad , remote: true do |f|  %>
+<%= form_for @jampad , :url => { :action => :jampad_update, :id => @jampad } , remote: true do |f|  %> 
+
+<!-- @jampad produce params[:jampad] imp and jampad is a hash as you know 
+
+and object and object.id same thing remember this-->
 
 
   <% if @jampad.errors.any? %>

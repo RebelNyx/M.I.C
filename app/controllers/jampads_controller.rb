@@ -2,7 +2,7 @@ class JampadsController < ApplicationController
 
      before_action :authenticate_user! , except: [:jampad_home]
 
-       before_action :show, only: [:jampad_show]
+       before_action :show, only: [:jampad_show, :jampad_edit , :jampad_update]
 
 
   def jampad_home
@@ -23,6 +23,35 @@ class JampadsController < ApplicationController
   @detail = @jampad.jampad_detail
 
   end
+
+  def jampad_edit
+
+
+
+    end
+
+
+
+  def jampad_update
+
+
+       respond_to do |format|
+      if @jampad.update(jampad_params)
+       
+          format.html { redirect_to '/jampad_home' , notice: 'Userdetail was successfully created.' }
+
+      else
+
+
+      format.js { @update = true }
+
+
+      end
+    end
+  end
+
+ 
+
 
 
   def create_partner
@@ -69,7 +98,6 @@ private
 
 
 end
-
 
 
 

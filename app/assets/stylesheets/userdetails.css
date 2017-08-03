@@ -390,7 +390,7 @@ div.people{
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    padding-top: auto;/* Location of the box */
     left: 0;
     top: 0;
     width: 100%; /* Full width */
@@ -407,6 +407,7 @@ div.people{
     width: 80%;
     max-width: 400px;
     height: auto;
+    margin-top: 50px; 
 }
 
 /* Caption of Modal Image */

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170731192732) do
+ActiveRecord::Schema.define(version: 20170802215636) do
 
   create_table "follower_mappings", force: :cascade do |t|
     t.integer  "follower_id"
@@ -27,12 +27,12 @@ ActiveRecord::Schema.define(version: 20170731192732) do
     t.integer  "no_of_microphone",    null: false
     t.integer  "drumkit",             null: false
     t.integer  "sound_system",        null: false
-    t.string   "guitar_amps_d"        default: "No details available"
-    t.string   "bass_amps_d"          default: "No details available"
-    t.string   "keyboard_amps_d"      default: "No details available"
-    t.string   "microphone_d"         default: "No details available"
-    t.string   "drumkit_d"            default: "No details available"
-    t.string   "sound_system_d"       default: "No details available"
+    t.string   "guitar_amps_d"
+    t.string   "bass_amps_d"
+    t.string   "keyboard_amps_d"
+    t.string   "microphone_d"
+    t.string   "drumkit_d"
+    t.string   "sound_system_d"
     t.integer  "jampad_id"
     t.datetime "created_at",          null: false
     t.datetime "updated_at",          null: false
@@ -49,8 +49,11 @@ ActiveRecord::Schema.define(version: 20170731192732) do
     t.integer  "user_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.string   "country"
   end
 
+  add_index "jampads", ["Email"], name: "index_jampads_on_Email", unique: true
+  add_index "jampads", ["Phone"], name: "index_jampads_on_Phone", unique: true
   add_index "jampads", ["user_id"], name: "index_jampads_on_user_id"
 
   create_table "posts", force: :cascade do |t|

@@ -23,13 +23,22 @@
 
      <div class="edit_field">
     
-    <%= f.text_field :Email , placeholder: "Email" %>
+    <%= f.email_field :Email , placeholder: "Email" %>
 
     </div>
 
+    <div class="edit_field">
+
+    
+ <%= f.country_select(:country, { include_blank: 'Select a country' }, priority_countries: ["GB", "US", "CA", "AU", "TH", "JP", "IN", "FR", "DE"] , prompt: true) %>
+
+    </div>
+ 
      <div class="edit_field">
     
-    <%= f.text_field :Phone , placeholder: "Phone" %>
+    <%= f.telephone_field :Phone , placeholder: "Phone" %>
+
+    <i>Format : XXX-XXX-XXXX</i>
 
     </div>
 

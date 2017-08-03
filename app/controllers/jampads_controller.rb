@@ -86,7 +86,7 @@ private
 
 
     def jampad_params
-      params.require(:jampad).permit(:Email, :Phone, :Jampad_Name, :city, :state)
+      params.require(:jampad).permit(:Email, :Phone, :Jampad_Name, :city, :state , :country)
     end
 
     def show 

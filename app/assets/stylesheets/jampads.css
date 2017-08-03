@@ -1,4 +1,16 @@
-	.jampad_desc{
+	
+
+    #jampad_list {
+
+        display: flex;
+
+        flex-direction: column;
+    }
+
+
+
+
+    .jampad_desc{
 
 		  position: relative;
     justify-content: center;
@@ -35,3 +47,4 @@
 
 
 	}
+

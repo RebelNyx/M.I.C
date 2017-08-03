@@ -26,6 +26,8 @@ Rails.application.routes.draw do
      patch 'jampad_details/:id' => 'jampad_details#update'
      put 'jampad_details/:id' => 'jampad_details#update'
 
+     delete 'jampads/:id' => 'jampads#jampad_destroy'
+
 
   resources :posts , only: [:create , :destroy ]
   resources :userdetails , only: [:create , :new, :show, :edit , :update, :users ]

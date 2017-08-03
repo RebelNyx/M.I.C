@@ -1,8 +1,16 @@
+
+
+
+<div id="jampad_list">
+
 <% @jampads.each do |j| %>
 <div class = "jampad_desc">
 <div id =jampad_fields>
 <h3>JAMPAD NAME:</h3><%= j.Jampad_Name %>
 </div>
+
+
+
 <div id =jampad_fields>
 <h3>CONTACT:</h3><%=j.Phone %>
 </div>
@@ -38,15 +46,28 @@
 <h4><%= link_to "Edit About Jampad" , url_for(controller: :jampads , action: :jampad_edit , id: j.id ), remote: true %></h4>
 </div>
 
+<div id = "jampad_fields"
+
+<h4><%= link_to "Delete Jampad" , url_for(controller: :jampads , action: :jampad_destroy , id: j.id ), remote: true , method: :delete %></h4>
+ 
+
+</div>
+
 	
 </div>
 
 <% end %>
 
-</div>
+
 <br>
 
 
 
 <% end %>
+
+</div>
+
+
+
+
 

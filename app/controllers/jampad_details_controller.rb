@@ -6,9 +6,15 @@ class JampadDetailsController < ApplicationController
 
   def create_jampad_details
 
+ 
+
+    jampad = params[:jampad_id]
+
  	   @detail = JampadDetail.new(jampad_detail_params)
 
-    @detail.jampad_id = current_user.jampads.first.id
+     @detail.jampad_id = jampad
+
+  
 
     respond_to do |format|
       if @detail.save

@@ -2,7 +2,7 @@ class JampadsController < ApplicationController
 
      before_action :authenticate_user! , except: [:jampad_home]
 
-       before_action :show, only: [:jampad_show, :jampad_edit , :jampad_update]
+       before_action :show, only: [:jampad_show, :jampad_edit , :jampad_update , :jampad_destroy]
 
 
   def jampad_home
@@ -34,6 +34,8 @@ class JampadsController < ApplicationController
 
   def jampad_update
 
+        if @jampad.user == current_user
+
 
        respond_to do |format|
       if @jampad.update(jampad_params)
@@ -47,6 +49,9 @@ class JampadsController < ApplicationController
 
 
       end
+
+    end
+
     end
   end
 
@@ -77,6 +82,18 @@ class JampadsController < ApplicationController
     end
 
   end
+
+  def jampad_destroy
+
+    if @jampad.user == current_user
+
+        @jampad.destroy
+          
+
+    end
+
+  end
+
 
 
 

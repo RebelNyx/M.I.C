@@ -1,0 +1,106 @@
+<%= form_for @detail , :url => { :action => :update, :id => @detail } , remote: true do |f|  %>
+  <% if @detail.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@detail.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @detail.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class ="jampad-reg">
+<div class ="edit_field">
+  <h2>About Your Jampad</h2>
+</div>
+
+  <div class="edit_field">
+    
+    <%= f.number_field :no_of_guitar_amps , min: 0 , placeholder: "How Many Guitar Amps You Have ?" %>
+
+    </div>
+
+     <div class="edit_field">
+    
+    <%= f.text_field :guitar_amps_d , placeholder: "Give Description of each" %>
+
+    </div>
+
+     <div class="edit_field">
+    
+    <%= f.number_field :no_of_bass_amps , min: 0 , placeholder: "How Many Bass Amps You Have ?" %>
+
+    </div>
+
+     <div class="edit_field">
+    
+    <%= f.text_field :bass_amps_d, placeholder: "Give Description of each" %>
+
+    </div>
+
+       <div class="edit_field">
+    
+    <%= f.number_field :no_of_keyboard_amps  , min: 0 , placeholder: "How Many Keyboard Amps You Have ?" %>
+
+    </div>
+
+
+       <div class="edit_field">
+
+        <%= f.text_field :keyboard_amps_d , placeholder: "Give Description of each" %>
+    
+   
+
+    </div>
+
+       <div class="edit_field">
+
+        <%= f.number_field :no_of_microphone , min: 0 , placeholder: "How Many Microphone  You Have ?" %>
+    
+   
+
+    </div>
+
+          <div class="edit_field">
+    
+    <%= f.text_field :microphone_d , placeholder: "Give Description of each" %>
+
+    </div>
+
+          <div class="edit_field">
+    
+    <%= f.number_field :drumkit , min: 0 , placeholder: "How Many Drum Kits You Have ?" %>
+    </div>
+
+          <div class="edit_field">
+    
+    <%= f.text_field :drumkit_d , placeholder: "Give Description of each" %>
+
+    </div>
+
+          <div class="edit_field">
+    
+    <%= f.number_field :sound_system , min: 0 , placeholder: "How Many Sound Systems You Have ?" %>
+
+    </div>
+
+          <div class="edit_field">
+    
+    <%= f.text_field :sound_system_d, placeholder: "Give Description of each" %>
+
+    </div>
+
+  
+ 
+
+  <div class="edit_field">
+    <%= f.submit %>
+  </div>
+
+   </div>
+   </div>
+<% end %>
+
+

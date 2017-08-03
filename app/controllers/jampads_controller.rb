@@ -38,7 +38,7 @@ class JampadsController < ApplicationController
        respond_to do |format|
       if @jampad.update(jampad_params)
        
-          format.html { redirect_to '/jampad_home' , notice: 'Userdetail was successfully created.' }
+          format.html { redirect_to '/jampad_home' , notice: 'jampad details successfully updated.' }
 
       else
 

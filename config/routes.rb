@@ -21,6 +21,10 @@ Rails.application.routes.draw do
 
   get 'jampad_show/:id' => 'jampads#jampad_show'
 
+   get 'jampad_details/:id/edit' => 'jampad_details#edit' 
+   
+     patch 'jampad_details/:id' => 'jampad_details#update'
+     put 'jampad_details/:id' => 'jampad_details#update'
 
 
   resources :posts , only: [:create , :destroy ]

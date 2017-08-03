@@ -27,7 +27,12 @@
 	<% if current_user== j.user%>
 	<div id =jampad_fields>
 	
-<h2><%= link_to "Manage your Jampad" , url_for(controller: :jampads , action: :jampad_edit , id: j.id ), remote: true %></h2>
+<h4><%= link_to "Edit About Jampad" , url_for(controller: :jampads , action: :jampad_edit , id: j.id ), remote: true %></h4>
+</div>
+<div id =jampad_fields>
+
+<h4><%= link_to "Edit Jampad Details" , url_for(controller: :jampad_details , action: :edit , id: j.id ), remote: true %></h4>
+</div>
 	
 </div>
 

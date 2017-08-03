@@ -6,7 +6,7 @@ class JampadDetailsController < ApplicationController
 
   def create_jampad_details
 
- 
+        
 
     jampad = params[:jampad_id]
 

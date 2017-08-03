@@ -19,19 +19,6 @@
 //= require_tree .
 
 
-$(document).ready(function(){
 
-      $("#aboutsite  div:gt(0)").hide(); //first show only gt(0) greater than 0
-
-setInterval(function() { 
-  $("#aboutsite  div:first-child")
-    .fadeOut(0) //gayab ho rha h
-    .next() //next div
-    .fadeIn(1000) // aarha h
-    .end() // move pointer back to top
-     .appendTo('#aboutsite'); //move to last
-},  4000);
-
-})
 
 

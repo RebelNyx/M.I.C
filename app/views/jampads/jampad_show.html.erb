@@ -1,4 +1,17 @@
 
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close" id="close">×</span>
+ 
+
+  <div id="form_show"> </div>
+ 
+  
+</div>
+
+
+
 <div class = "jampad_desc">
 <div id =jampad_fields>
 Guitar Amp(s) : <%= @detail.no_of_guitar_amps %> ,
@@ -27,6 +40,8 @@ Drum kit : <%= @detail.drumkit %> ,
 <div id =jampad_fields>
 sound system : <%= @detail.sound_system %>
 <%= @detail.sound_system_d %>
+
+   <h4><%= link_to "Edit Jampad Details" , url_for(controller: :jampad_details , action: :edit , id: @detail ), remote: true %></h4>
 
 </div>
 </div>

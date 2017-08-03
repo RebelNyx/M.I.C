@@ -40,9 +40,9 @@ class JampadDetailsController < ApplicationController
  
 
        respond_to do |format|
-      if @detail.update(jampad_details_params)
+      if @detail.update(jampad_detail_params)
        
-          format.html { redirect_to 'jampads/jampad_show' , notice: 'jampad details successfully updated.' }
+          format.html { redirect_to :back , notice: 'jampad details successfully updated.' }
 
       else
 
@@ -70,6 +70,7 @@ private
     end
 
     def curr_detail
+
       @detail=JampadDetail.find(params[:id])
 
 

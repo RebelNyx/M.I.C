@@ -53,6 +53,16 @@ Devise.setup do |config|
   # modifying a user and when used to authenticate or find a user. Default is :email.
   config.strip_whitespace_keys = [:email]
 
+
+
+
+# If http headers should be returned for AJAX requests. True by default.
+config.http_authenticatable_on_xhr = false
+
+
+
+
+
   # Tell if authentication through request.params is enabled. True by default.
   # It can be set to an array that will enable params authentication only for the
   # given strategies, for example, `config.params_authenticatable = [:database]` will

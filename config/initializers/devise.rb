@@ -55,10 +55,8 @@ Devise.setup do |config|
 
 
 
-
 # If http headers should be returned for AJAX requests. True by default.
-config.http_authenticatable_on_xhr = false
-
+# config.http_authenticatable_on_xhr = false
 
 
 

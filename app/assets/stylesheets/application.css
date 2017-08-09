@@ -125,9 +125,7 @@ margin-right: 20px;
 div.authentication , div.edit_authentication{
     opacity: 1;
     
-     position: absolute;
-     top: 30px;
-     right: 50px;
+     
 	display: flex;
 	flex-direction: column;
    width:350px;
@@ -288,7 +286,7 @@ input[type="submit"]:hover{
 }
 
 .links a:hover {
-	text-decoration: underline;
+	text-decoration:none;
 	color: #25033a;
 }
 

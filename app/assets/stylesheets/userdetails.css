@@ -432,6 +432,7 @@ div.people{
     animation-duration: 0.6s;
 }
 
+
 @-webkit-keyframes zoom {
     from {-webkit-transform: scale(0)} 
     to {-webkit-transform: scale(1)}

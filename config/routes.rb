@@ -49,6 +49,8 @@ Rails.application.routes.draw do
   get '/followers' => 'follow#followers'
   get '/following' => 'follow#following'
 
+  post '/search' => 'userdetails#search'
+
   root 'home#index'
 
   

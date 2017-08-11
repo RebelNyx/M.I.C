@@ -15,6 +15,23 @@ class UserdetailsController < ApplicationController
     end
 
   end
+
+
+    def search
+
+      
+    
+    @search = params[:search]
+
+    if @search && @search.length > 0
+
+        user = User.where("email like '%#{@search}%'").first
+
+      redirect_to controller: 'userdetails', action: 'show', id: user.id
+
+    end
+
+    end
   
 
 
@@ -118,6 +135,10 @@ class UserdetailsController < ApplicationController
   render :text => filename  #send data back to ajax as text
 
   end
+
+
+
+
     
 
   end

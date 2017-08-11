@@ -17,9 +17,23 @@
 		<div class ="name">
 
 		<h4>M.I.C.</h4>
+
+
 		
 
 		</div>
+
+
+
+<%= form_tag '/search', method: :post do %>
+ <%= text_field_tag :search , @search %>
+ 
+ 
+ <%= submit_tag "Search" %>
+ 
+ <% end %>
+
+<li>
 
 
 		<nav>

@@ -142,6 +142,8 @@ justify-content: center;
 
 
 
+
+
 <header class="start_page">
 
 <section id="logo">
@@ -176,11 +178,10 @@ LoGo
 <div class="first_container">
 
 
-<div class="page_description">
+<div id="page_description">
 	
-	<span>
-		Stay Connected . Stay Musical 
-	</span>
+			<%= render 'devise/aboutsite' %>
+	
 
 </div>
 
@@ -415,9 +416,13 @@ color: #6cc7b5;
 }
 
 
+#page_description{
 
+	    margin-top: 70px;
 
-.page_description span {
+}
+
+#page_description div{
 
 	  color: white;
     font-family: sans-serif;
@@ -425,17 +430,20 @@ color: #6cc7b5;
      font-weight: 800;
          line-height: 70px;
 
+         margin-left: 50px;
+         
+         margin-right: 50px;
+
+         padding-left: 30px;
+         padding-right: 30px;
+
    
 
 
 
 }
 
-.page_description{
 
-	    margin-top: 50px;
-
-}
 
 
 .home_buttons {display: flex;
@@ -584,3 +592,22 @@ font-family: sans-serif;
 
 
 </style>
+
+
+<script type="text/javascript">
+  
+  $(document).ready(function(){
+
+      $("#page_description div:gt(0)").hide(); //first show only gt(0) greater than 0
+
+setInterval(function() { 
+  $("#page_description  div:first-child")
+    .fadeOut(0) //gayab ho rha h
+    .next() //next div
+    .fadeIn(1000) // aarha h
+    .end() // move pointer back to top
+     .appendTo('#page_description'); //move to last
+},  4000);
+
+});
+</script>

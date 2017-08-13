@@ -249,14 +249,14 @@ div.people{
 
 }
 
-#userdetail_bio , #userdetail_artist_type  , #userdetail_fblink , #userdetail_ytlink , #userdetail_soundcloud
+#userdetail_bio , #userdetail_artist_type, #userdetail_musician  , #userdetail_fblink , #userdetail_ytlink , #userdetail_soundcloud
 
 {
 	-webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     outline: none;
     display: block;
-    width: 700px;
+    width: 600px;
     padding: 7px;
     border : 1px solid grey;
 

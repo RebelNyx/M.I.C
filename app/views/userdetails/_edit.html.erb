@@ -2,7 +2,187 @@
 
 
 
+<div class="userdetail">
+<div class = "edit_info">
+<% if current_user.userdetail %>
+<h2>
+Edit Intro
+</h2>
 
-<%= render 'form' %>
+<% else %>
+
+<h2> Create Profile </h2>
+
+<% end %>
+
+
+</div><p id =mandatory>*Mandatory Fields</p>
+<hr>
+
+
+
+<div class = "content">
+
+
+
+ <div id ="profile_photo">
+
+ 
+
+ <div id="pic">
+
+<%= render 'profile' %>
+
+</div>
+
+
+   
+
+
+<!--  mutipart and remote can't use together no obstrutive js for oploading  -->
+
+
+<%= form_tag url_for(controller: :userdetails , action: :upload) ,multipart: true , id: "form" do %>
+
+    <div class="upload_photo">
+    
+<%= file_field_tag :image %>
+<br><br>
+<%= submit_tag "Upload" ,:id => 'submit'%>
+  </div>
+
+  <% end %>
+
+</div>
+ 
+
+<%= form_for @userdetail, :url => { :action => :update, :id => @userdetail } , remote: true do |f| %>
+  <% if @userdetail.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@userdetail.errors.count, "error") %> prohibited this userdetail from being saved:</h2>
+
+      <ul>
+      <% @userdetail.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+
+ 
+  <div class="Bio">
+    
+  <%= f.select :bio, options_for_bio, :prompt => 'Who Are You ?' %>
+  </div>
+
+
+  <div class="musicians">
+
+<%= f.select :musician, options_for_musicians, :prompt => 'Select One' %>
+
+</div>
+
+  <div class="description">
+  
+    <%= f.text_area :artist_type , placeholder: "Tell Me About Yourself !!!   *"  %>
+  </div>
+
+
+
+  <div class="fblink">
+ 
+   
+    <%= f.text_field :fblink , placeholder: "Facebook Link"  %>
+  </div>
+  <div class="ytlink">
+ 
+    <%= f.text_field :ytlink , placeholder: "Youtube Link"  %>
+  </div>
+  <div class="soundcloud">
+ 
+    
+    <%= f.text_field :soundcloud , placeholder: "SoundCloud Link"  %>
+  </div>
+  <div class="done">
+    <%= f.submit %>
+  </div>
+<% end %>
+</div>
+
+</div>
+
+<script type="text/javascript">
+
+    
+    $("#userdetail_bio").on("change",function(){
+
+
+    var value = $("#userdetail_bio option:selected").text();
+
+   
+
+    if(value==="Band"){
+
+      $("#userdetail_musician").hide();
+
+    }
+
+    else
+
+    {
+      $("#userdetail_musician").show();
+    }
+
+    });
+
+  
+
+
+  
+     $("#form").on("submit" , function(event){
+
+    event.preventDefault();
+  
+  var formData = new FormData(this);
+console.log(formData);
+
+   $.ajax({
+    type: 'POST',
+    url: '/upload', 
+    
+    data: formData, // send data
+    //dataType : what type of data you want 
+
+    contentType: false,  // prevent default force jquery not to add default imp for multipart
+    processData: false,  // prevent data convert into string
+
+    success: function(data){
+
+ 
+console.log(data);
+
+
+   //$("#image").attr("src" , "default.png")
+    //$("#photo_show").html(" <%= j render 'profile' %> ")  js work procedure event handling imp 
+    
+   $("#photo img").attr("src" , ("<%= asset_path('/uploads/')%>" + data)) //asset pipeline concept
+   
+
+    },
+    
+        errors: function(){
+
+          console.log(arguments);
+        }
+
+   });
+
+
+  });
+
+</script>
+
 
 

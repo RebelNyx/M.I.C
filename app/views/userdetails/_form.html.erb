@@ -72,12 +72,22 @@ Edit Intro
  
   <div class="Bio">
     
-    <%= f.text_field :bio , placeholder: "Who Are You ? (Band/ Individual Artist)  *" %>
+  <%= f.select :bio, options_for_bio, :prompt => 'Who Are You ?' %>
   </div>
+
+
+  <div class="musicians">
+
+<%= f.select :musician, options_for_musicians, :prompt => 'Select One' %>
+
+</div>
+
   <div class="description">
   
     <%= f.text_area :artist_type , placeholder: "Tell Me About Yourself !!!   *"  %>
   </div>
+
+
 
   <div class="fblink">
  
@@ -102,6 +112,32 @@ Edit Intro
 </div>
 
 <script type="text/javascript">
+
+    
+    $("#userdetail_bio").on("change",function(){
+
+
+    var value = $("#userdetail_bio option:selected").text();
+
+   
+
+    if(value==="Band"){
+
+      $("#userdetail_musician").hide();
+
+    }
+
+    else
+
+    {
+      $("#userdetail_musician").show();
+    }
+
+    });
+
+  
+
+
   
      $("#form").on("submit" , function(event){
 

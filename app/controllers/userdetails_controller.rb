@@ -100,10 +100,12 @@ class UserdetailsController < ApplicationController
     respond_to do |format|
       if @userdetail.update(userdetail_params)
         format.html { redirect_to @userdetail, notice: 'Userdetail was successfully updated.' }
+        
         format.json { render :show, status: :ok, location: @userdetail }
       else
-        format.html { render :edit }
-        format.json { render json: @userdetail.errors, status: :unprocessable_entity }
+        
+        format.js   {}
+        
       end
     end
   end
@@ -161,6 +163,6 @@ class UserdetailsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def userdetail_params
-      params.require(:userdetail).permit(:user_id, :bio, :artist_type, :profile_photo, :fblink, :ytlink, :soundcloud)
+      params.require(:userdetail).permit(:user_id, :bio, :artist_type, :profile_photo, :fblink, :ytlink, :soundcloud, :musician)
     end
 end

@@ -5,6 +5,13 @@ class Users::RegistrationsController < Devise::RegistrationsController
 
    respond_to :html, :js
 
+     protected
+
+    def after_update_path_for(resource)
+      new_userdetail_path
+    end
+
+
 
   # GET /resource/sign_up
   # def new

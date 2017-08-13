@@ -27,7 +27,16 @@ class UserdetailsController < ApplicationController
 
         user = User.where("email like '%#{@search}%'").first
 
+        if user
+
       redirect_to controller: 'userdetails', action: 'show', id: user.id
+
+    else
+
+    redirect_to :back, notice: 'No User Found'
+
+  end
+
 
     end
 

@@ -42,6 +42,7 @@ class UserdetailsController < ApplicationController
 
     end
   
+  end
 
 
 
@@ -99,7 +100,7 @@ class UserdetailsController < ApplicationController
   def update
     respond_to do |format|
       if @userdetail.update(userdetail_params)
-        format.html { redirect_to @userdetail, notice: 'Userdetail was successfully updated.' }
+        format.html { redirect_to :back, notice: 'Userdetail was successfully updated.' }
         
         format.json { render :show, status: :ok, location: @userdetail }
       else
@@ -115,7 +116,7 @@ class UserdetailsController < ApplicationController
   def destroy
     @userdetail.destroy
     respond_to do |format|
-      format.html { redirect_to userdetails_url, notice: 'Userdetail was successfully destroyed.' }
+     format.html { redirect_to userdetails_url, notice: 'Userdetail was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -154,7 +155,7 @@ class UserdetailsController < ApplicationController
 
   end
 
-end
+
   
 
   private

@@ -32,10 +32,167 @@ remote: true %> </li>
 
 
 
-<div id="Video">
+
+
+
+<div class ="Video">
+
+<!-- <div id ="name_top">
+<%= current_user.first_name + current_user.last_name %>
+
+</div> -->
 	
 <%= video_tag  asset_path('giphy.mp4'), :size => "320x240",  :autoplay => true, :loop => true , :id => "video" %>
 </div>
+
+
+<main class ="start">
+
+
+<div class = "profile_container">
+
+<div class = "basic_profile">
+
+<div id ="photo_show">
+
+  <% if @userdetail.user.profile_photo %>
+
+<img  id = "image" src="/uploads/<%= @userdetail.user.profile_photo %>" alt="<%=@userdetail.user.first_name %>"  >
+
+<% else %>
+
+<img src="<%= asset_path('default.png') %>">
+
+<% end %>
+
+
+
+<div class = "interact_features">
+
+
+<div id="message">
+<i class="fa fa-envelope-open" aria-hidden="true"></i>
+
+
+
+</div>
+
+<div id ="collaborate">
+<i class="fa fa-handshake-o" aria-hidden="true"></i>
+
+	</div> 
+
+</div>
+
+
+</div>
+
+
+<div id ="profile_name">
+
+<div >
+<span id = name><%= current_user.first_name + current_user.last_name %> </span><span id =text>is a</span>
+
+
+</div>
+
+
+
+<div id = musician_type>
+	
+	<%= @userdetail.musician %>
+</div>
+
+
+ <div id ="follow_show">
+
+<span>
+<i class="fa fa-users  fa-1x"" aria-hidden="true"></i>
+</span>
+
+<span>
+
+
+<%= link_to "Followers",url_for(controller: :follow, action: :followers , id: @userdetail.user.id), 
+remote: true  %> : <%= @userdetail.user.followers_count %>
+</span>
+<span>
+
+
+<%= link_to "Following",url_for(controller: :follow, action: :following , id: @userdetail.user.id), 
+remote: true   %> : <%= @userdetail.user.followees_count %></span>
+
+</div> 
+
+<div class="links">
+
+
+<div id="user_fblink">
+<i class="fa fa-facebook fa-1x" aria-hidden="true"></i>
+
+
+ <a href = "  <%= @userdetail.fblink %>">
+
+  <%= @userdetail.fblink %>
+
+  </a> 
+
+
+</div>
+
+<div id="user_ytlink">
+
+<i class="fa fa-youtube-play fa-1x" aria-hidden="true"></i>
+
+
+<a href = "<%= @userdetail.ytlink %>">
+
+  <%= @userdetail.ytlink %>
+
+  </a>
+ 
+
+</div>
+
+<div id="user_soundcloud">
+<i class="fa fa-soundcloud fa-1x" aria-hidden="true"></i>
+
+
+<a href = " <%= @userdetail.soundcloud %>">
+
+ <%= @userdetail.soundcloud %>
+ </a> 
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+</div>
+
+</div>
+
+</main>
+
+
+
+
+
 
 
 

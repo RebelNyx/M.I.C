@@ -38,7 +38,7 @@ class UserdetailsController < ApplicationController
   end
 
 
-    end
+    
 
     end
   
@@ -153,6 +153,8 @@ class UserdetailsController < ApplicationController
     
 
   end
+
+end
   
 
   private

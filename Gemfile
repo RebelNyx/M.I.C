@@ -33,6 +33,10 @@ gem 'countries'
 
 gem 'country_select'
 
+gem 'ransack'
+
+
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

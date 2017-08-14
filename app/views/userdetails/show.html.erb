@@ -1,13 +1,11 @@
 
 
-
-
 <!-- The Modal -->
 <div id="myModal" class="modal">
   <span class="close" id="close">×</span>
   <img class="modal-content" id="img01">
 
-  <div id="form_show"> </div>
+  <div id="form_show"></div>
  
   <div id="caption"></div>
 </div>
@@ -18,7 +16,7 @@
 
 <div class="update">
 
-<%= link_to 'Edit', 
+<li><%= link_to 'Edit', 
 url_for(controller: :userdetails, action: :edit , id: current_user.userdetail.id), 
 remote: true %> </li>
 <li> <%= link_to "Users", users_path %> </li>
@@ -34,162 +32,15 @@ remote: true %> </li>
 
 
 
-
-<div  class="user_profile">
-<!-- <img  id = "cover_photo" src="/assets/defocussed.jpg"> -->
-
-
-
-
-
- <div id ="photo_show">
-
-  <% if @userdetail.user.profile_photo %>
-
-<img  id = "image" src="/uploads/<%= @userdetail.user.profile_photo %>" alt="<%=@userdetail.user.first_name %>"  >
-
-<% else %>
-
-<img src="<%= asset_path('default.png') %>">
-
-<% end %>
-</div>
-
-</div>
-
-
-
-
-<div id="bio_start">
-
-<div class ="user_detail">
-
-<div id= "user_name">
-
-  <%= @userdetail.user.first_name%>
-  <%= @userdetail.user.last_name%>
-
+<div id="Video">
+	
+<%= video_tag  asset_path('giphy.mp4'), :size => "320x240",  :autoplay => true, :loop => true , :id => "video" %>
 </div>
 
 
 
 
 
-
-<div id= "user_bio">
-
-  <%= @userdetail.bio %>
-</div>
-
-
-<div id="user_description">
-
-  <%= @userdetail.artist_type %>
-
-
-</div>
-
-
-
-<div class="links">
-
-Find me here !!
-
-<div id="user_fblink">
-
-
-
-
-
-    <a href = "  <%= @userdetail.fblink %>">
-
-  <%= @userdetail.fblink %>
-
-  </a> 
-
-
-</div>
-
-<div id="user_ytlink">
-
-
-
- 
-  <a href = "<%= @userdetail.ytlink %>">
-
-  <%= @userdetail.ytlink %>
-
-  </a>
- 
-
-</div>
-
-<div id="user_soundcloud">
-
-
-
-
-
-
-
- 
-
-    <a href = " <%= @userdetail.soundcloud %>">
-
- <%= @userdetail.soundcloud %>
- 
-
-  </a> 
-
-
-
-</div>
-
-</div>
-
-</div>
-
-<div class="user_media">
-
- <div id ="follow_show">
-
-<h3><%= link_to "Followers",url_for(controller: :follow, action: :followers , id: @userdetail.user.id), 
-remote: true  %> : <%= @userdetail.user.followers_count %>
-
-<%= link_to "Following",url_for(controller: :follow, action: :following , id: @userdetail.user.id), 
-remote: true   %> : <%= @userdetail.user.followees_count %></h3>
-
-</div> 
-
-<% if @userdetail.user == current_user %>
-
-<div id ="posts">
-
-
-<%= render 'new_post' %>
-
-
-</div>
-
-<% end %>
-
-<div id = "post_show">
-
-<% @post_show.each do |post| %>
-
-
-
-<%= render "post_show" , { post: post , userdetail: @userdetail } %>
-
-
-<% end %>
-
-</div>
-
-  
-</div>
-
-</div>
 
 
 

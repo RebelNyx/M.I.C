@@ -19,19 +19,24 @@
 		<h4>M.I.C.</h4>
 
 
+
+
 		
 
 		</div>
 
 
-
-<%= form_tag '/search', method: :post do %>
+		<%= form_tag '/search', method: :post do %>
  <%= text_field_tag :search , @search %>
  
  
- <%= submit_tag "Search" %>
+ <%= submit_tag "Search" , id: 'search_button' %>
  
  <% end %>
+
+
+
+
 
 <li>
 
@@ -60,7 +65,7 @@
 
 
 
-	<main class="start">
+	
 
 	
 <% if notice %>
@@ -87,7 +92,7 @@
 
 <%= yield %>
 
-</main>
+
 
 
 

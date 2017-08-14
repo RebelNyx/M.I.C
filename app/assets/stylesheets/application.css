@@ -42,15 +42,15 @@ header{
     
     padding-left: 60px;
     padding-right: 10px;
-    height: 60px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    background-color: #25033a;
+    background-color: white;
   
       /*  background: linear-gradient(#0b738f,#501c88); */
-    border-bottom: 1px solid rgb(80, 74, 74) ;
+   /* border-bottom: 1px solid rgb(80, 74, 74) ;*/
     margin-top:0;
     margin-right: 0;
     margin-left: 0;
@@ -59,11 +59,11 @@ header{
 
 body div.name{
 
-    color: white;
+    color: black;
     font-family: monospace;
     font-size: 24px;
     font-style: normal;
-    font-variant: normal;x
+    font-variant: normal;
     font-weight: 500;
     line-height: 26.4px; 
 }
@@ -71,7 +71,7 @@ body div.name{
 
 header nav ul{
     display: flex;
-    color: white;
+    color: black;
     font-family: "Courier New", Courier, "Lucida Sans Typewriter", "Lucida Typewriter", monospace;
     font-size: 14px;
     font-style: normal;

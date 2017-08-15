@@ -1,15 +1,59 @@
 
-<%= user.first_name + user.last_name %>
 
 
 
+<div class = "users_photo">
+<% if user.profile_photo %>
 
+<img  id = "image" src="/uploads/<%= user.profile_photo %>" alt="<%= user.first_name %>"  >
 
-<%= render 'follow', user: user %>
+<% else %>
 
+<img src="<%= asset_path('default.png') %>">
+
+<% end %>
 <% unless user.userdetail.nil? %>
 
- <%= link_to "profile" ,
+
+
+
+ <%= link_to user.first_name + user.last_name ,
  url_for(controller: :userdetails, action: :show, id: user.userdetail.id), method: :get %>
+ 
 
  <% end %>
+ <%= render 'follow', user: user %>
+ </div>
+
+
+
+
+
+
+
+
+
+ <style type="text/css">
+ 	.users_photo{
+
+        display: flex;
+        justify-content: space-between;
+
+         padding:20px;
+
+ 	}
+
+
+
+ 	.users_photo img{
+
+ 		width: 100px;
+ 		height: 100px;
+ 		border-radius: 50%;
+
+ 	}
+
+
+ </style>
+
+ 

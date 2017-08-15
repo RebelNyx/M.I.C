@@ -628,6 +628,8 @@ min-width: 100%;
 
 
 #follow_show{
+    display: flex;
+    justify-content: center;
 
 
 padding-top: 20px;
@@ -681,19 +683,21 @@ color: black;
 
 padding-bottom: 5px;
 
+
 }
 
-/*.links div a:link {
+.links div a{
 
-    color: black;
+    color: white;
 }
+
 
 .links div a:hover {
 
-    text-decoration: underline;
-
+    text-decoration: none;
+     background-color: transparent;
 }
-*/
+
 
 .interact_features{
 
@@ -727,6 +731,21 @@ padding-bottom: 5px;
 
 .follow_button{
 
+
+}
+
+#description{
+
+display: flex;
+justify-content: center;
+color: white;
+font-family: sans-serif;
+    font-size: 20px;
+    line-height: 20px;
+padding-top: 20px;
+padding-bottom: 20px;
+
+ border-bottom: 1px solid white;
 
 }
 

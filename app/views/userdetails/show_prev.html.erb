@@ -78,7 +78,7 @@ remote: true %> </li>
 
 <div id= "user_bio">
 
-  <%= @userdetail.bio %>
+  <%= @userdetail.artist_type %>
 </div>
 
 
@@ -98,10 +98,7 @@ Find me here !!
 <div id="user_fblink">
 
 
-
-
-
-    <a href = "  <%= @userdetail.fblink %>">
+ <a href = "  <%= @userdetail.fblink %>">
 
   <%= @userdetail.fblink %>
 
@@ -112,10 +109,7 @@ Find me here !!
 
 <div id="user_ytlink">
 
-
-
- 
-  <a href = "<%= @userdetail.ytlink %>">
+<a href = "<%= @userdetail.ytlink %>">
 
   <%= @userdetail.ytlink %>
 
@@ -126,20 +120,10 @@ Find me here !!
 
 <div id="user_soundcloud">
 
-
-
-
-
-
-
- 
-
-    <a href = " <%= @userdetail.soundcloud %>">
+<a href = " <%= @userdetail.soundcloud %>">
 
  <%= @userdetail.soundcloud %>
- 
-
-  </a> 
+ </a> 
 
 
 

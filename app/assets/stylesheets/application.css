@@ -235,12 +235,23 @@ div.edit_authentication {
  input[type = "submit"]{
 
   /*  background: rgba(80, 67, 67, 0.98); */
-  background-color: #3a6271;
+  
     padding: 8px 20px 8px 20px;
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    color: #fff;
+   
+       padding: 7px;
+
+    border : 1px solid grey;
+
+    width: 120px;
+
+    color: white;
+
+    background: black;
+    
+   
+
+    border-radius: 20px;
+
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.12);
     font: normal 30px 'Bitter', serif;
     -moz-box-shadow: inset 0px 2px 2px 0px rgba(255, 255, 255, 0.17);
@@ -252,7 +263,7 @@ div.edit_authentication {
 }
 
 input[type="submit"]:hover{
-    color: black;
+    color: yellow;
     
 
 

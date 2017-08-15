@@ -84,6 +84,12 @@ remote: true %> </li>
 
 </div>
 
+<div id = "follow_toggle" >
+
+<%= render 'follow' , user: @userdetail.user %>
+
+</div>
+
 
 </div>
 
@@ -128,12 +134,12 @@ remote: true   %> : <%= @userdetail.user.followees_count %></span>
 
 
 <div id="user_fblink">
-<i class="fa fa-facebook fa-1x" aria-hidden="true"></i>
+
 
 
  <a href = "  <%= @userdetail.fblink %>">
 
-  <%= @userdetail.fblink %>
+ <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
 
   </a> 
 
@@ -142,12 +148,13 @@ remote: true   %> : <%= @userdetail.user.followees_count %></span>
 
 <div id="user_ytlink">
 
-<i class="fa fa-youtube-play fa-1x" aria-hidden="true"></i>
+
 
 
 <a href = "<%= @userdetail.ytlink %>">
 
-  <%= @userdetail.ytlink %>
+<i class="fa fa-youtube-play fa-2x" aria-hidden="true"></i>
+ 
 
   </a>
  
@@ -155,12 +162,13 @@ remote: true   %> : <%= @userdetail.user.followees_count %></span>
 </div>
 
 <div id="user_soundcloud">
-<i class="fa fa-soundcloud fa-1x" aria-hidden="true"></i>
 
 
 <a href = " <%= @userdetail.soundcloud %>">
 
- <%= @userdetail.soundcloud %>
+<i class="fa fa-soundcloud fa-2x" aria-hidden="true"></i>
+
+
  </a> 
 
 

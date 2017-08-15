@@ -1,50 +1,6 @@
 
 
 
-.user_profile{display: flex;
-
-
-flex-direction: column;
-
- justify-content: flex-end;
-
-    /* margin-top: -100px;*/
-    background-color: white;
-/*    margin-left: 120px;
-    margin-right: 120px;*/
-    margin-top: 20px;
-    margin-bottom: 20px;
-      border : 1px solid white;
-
-    padding: 30px;
-
-
-
-   
-
-    font-family: 'Open Sans Condensed', arial, sans;
-   
-   
-    background: #FFFFFF;
-    
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
-    -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
-    -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
-
-
-}
-
-#bio_start {
-
-    display: flex;
-  
-    margin-top: 20px;
-    margin-bottom: 20px;
-
-}
-
-
-
 
 .user_detail {     
 
@@ -189,6 +145,22 @@ div.people{
      width:500px;
     }
 
+
+    #photo_show {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        margin: 10px;
+        box-sizing: border-box;
+
+
+    
+
+
+    }
+
    
    
    #photo_show img {
@@ -230,7 +202,10 @@ div.people{
 
     width: 100%;
     height: 350px;
-    background-color: black;
+    background-color: #fdc414;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
    
 }
 
@@ -397,7 +372,7 @@ min-width: 100%;
 
  }
 
- .links {
+/* .links {
     display: flex;
     flex-direction: column;
     width: 20%;
@@ -412,7 +387,7 @@ min-width: 100%;
  .links img {
     height: 40px;
 
- }
+ }*/
 
  .update {
     display: flex;
@@ -421,7 +396,7 @@ min-width: 100%;
 
  }
 
- #list li a  {
+/* #list li a  {
     color: black;
     text-decoration: none;
     list-style: none;
@@ -430,7 +405,7 @@ min-width: 100%;
   #list li a:hover {
     text-decoration: underline;
     background-color: transparent;
- }
+ }*/
 
  
 
@@ -568,8 +543,12 @@ min-width: 100%;
 
 
 .basic_profile{
+
  display: flex;
  justify-content: space-around;
+ margin-top: 20px;
+
+
 
 }
 
@@ -578,14 +557,20 @@ min-width: 100%;
 
 #profile_name{
 
-    padding: 20px;
+    padding: 30px;
 
     flex-grow: 1;
 
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background-color: yellow;
+
+      box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.22);
+    -webkit-box-shadow:  0px 0px 15px rgba(0, 0, 0, 0.22);
+
+    background-color: #00b875
+   
+
 }
 
 #profile_name div span#name{
@@ -600,6 +585,8 @@ min-width: 100%;
     color: white;
 
 
+
+
 }
 
 
@@ -609,6 +596,7 @@ min-width: 100%;
     font-family: sans-serif;
     font-size: 20px;
     font-weight: 300;
+    color: black;
    
      /* background: linear-gradient(darkviolet, red); */
     
@@ -619,14 +607,22 @@ min-width: 100%;
 
 #musician_type{
      
-    line-height: 80px;
+    line-height: 100px;
        
     font-family: sans-serif;
     font-size: 80px;
-    font-weight: 500;
+    font-weight: bolder;
    
      /* background: linear-gradient(darkviolet, red); */
     color: white;
+
+    border-bottom: 1px solid white;
+    border-top: 1px solid white;
+    padding: 10px;
+    padding-bottom: 20px;
+    
+    margin: 6px;    
+
 
 }
 
@@ -637,6 +633,8 @@ min-width: 100%;
 padding-top: 20px;
 padding-bottom: 20px;
 
+color: black;
+
 
 
 }
@@ -646,22 +644,56 @@ padding-bottom: 20px;
 
     text-decoration: none;
     font-size: 20px;
+    
 
 
 
     
 }
-#follow_show span a{ 
+
+#follow_show span a {
+
+    color: white;
+    font-weight: bolder;
+}
+
+#follow_show span a:link {
+
     text-decoration: none;
 }
 
 
+#follow_show span a:hover{ 
+    text-decoration: underline;
+    background-color: transparent;
+}
+
+.links {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+
+
 .links div{
-font-size: 20px;
+
 padding-bottom: 5px;
 
 }
 
+/*.links div a:link {
+
+    color: black;
+}
+
+.links div a:hover {
+
+    text-decoration: underline;
+
+}
+*/
 
 .interact_features{
 
@@ -692,3 +724,9 @@ padding-bottom: 5px;
 
 
 }
+
+.follow_button{
+
+
+}
+

@@ -1,5 +1,5 @@
 class UserdetailsController < ApplicationController
-  before_action :set_userdetail, only: [:show, :edit, :update, :destroy]
+  before_action :set_userdetail, only: [:show, :edit, :update, :destroy, :prev]
 
     before_action :authenticate_user!
 
@@ -60,6 +60,14 @@ class UserdetailsController < ApplicationController
 
   # GET /userdetails/1
   # GET /userdetails/1.json
+
+  def prev
+
+     @post = Post.new
+    @post_show = @userdetail.user.posts.order(created_at: :desc)
+
+  end
+
   def show
 
     @post = Post.new

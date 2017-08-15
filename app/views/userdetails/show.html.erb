@@ -16,6 +16,8 @@
 
 <div class="update">
 
+<li><%= link_to 'Prev_Version', url_for(controller: :userdetails , action: :prev , id: current_user.userdetail.id) , method: :get %> </li>
+
 <li><%= link_to 'Edit', 
 url_for(controller: :userdetails, action: :edit , id: current_user.userdetail.id), 
 remote: true %> </li>
@@ -25,7 +27,7 @@ remote: true %> </li>
  url_for(controller: :userdetails , action: :show , id: current_user.userdetail.id), method: :get %></li>
  <li  id= "signout"><%= link_to "Sign Out",destroy_user_session_path,method: :delete %></li>
 
-<li>
+
 
 
 </div>

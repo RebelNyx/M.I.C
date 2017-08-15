@@ -29,8 +29,12 @@ Rails.application.routes.draw do
      delete 'jampads/:id' => 'jampads#jampad_destroy'
 
 
+
+
   resources :posts , only: [:create , :destroy ]
-  resources :userdetails , only: [:create , :new, :show, :edit , :update, :users ]
+  resources :userdetails , only: [:create , :new, :show, :edit , :update, :users]
+
+  get '/previous/show/:id' => 'userdetails#prev'
   
   
 

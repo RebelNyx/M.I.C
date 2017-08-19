@@ -92,55 +92,6 @@ remote: true %> </li>
 
 </div>
 
-
-</div>
-
-
-<div id ="profile_name">
-
-<div >
-<span id = name><%= @userdetail.user.first_name + @userdetail.user.last_name %> </span><span id =text>is a</span>
-
-
-</div>
-
-
-
-<div id = musician_type>
-	
-	<%= @userdetail.musician %>
-</div>
-
-
-<div id ="description">
-
- <%= @userdetail.artist_type %>
-
-</div>
-
-
-
-
- <div id ="follow_show">
-
-<span>
-<i class="fa fa-users  fa-1x"" aria-hidden="true"></i>
-</span>
-
-<span>
-
-
-<%= link_to "Followers",url_for(controller: :follow, action: :followers , id: @userdetail.user.id), 
-remote: true  %> : <%= @userdetail.user.followers_count %>
-</span>
-<span>
-
-
-<%= link_to "Following",url_for(controller: :follow, action: :following , id: @userdetail.user.id), 
-remote: true   %> : <%= @userdetail.user.followees_count %></span>
-
-</div> 
-
 <div class="links">
 
 
@@ -191,9 +142,66 @@ remote: true   %> : <%= @userdetail.user.followees_count %></span>
 
 </div>
 
+
+<div id ="profile_name">
+
+<div >
+<span id = name><%= @userdetail.user.first_name + @userdetail.user.last_name %> </span><span id =text>is a</span>
+
+
+</div>
+
+
+
+<div id = musician_type>
+	
+	<%= @userdetail.musician %>
+</div>
+
+
+
+
+
+
+ <div id ="follow_show">
+
+<span>
+<i class="fa fa-users  fa-1x"" aria-hidden="true"></i>
+</span>
+
+<span>
+
+
+<%= link_to "Followers",url_for(controller: :follow, action: :followers , id: @userdetail.user.id), 
+remote: true  %> : <%= @userdetail.user.followers_count %>
+</span>
+<span>
+
+
+<%= link_to "Following",url_for(controller: :follow, action: :following , id: @userdetail.user.id), 
+remote: true   %> : <%= @userdetail.user.followees_count %></span>
+
+</div> 
+
+
+
+
 </div>
 
 </div>
+
+
+<div id="user_description">
+
+ <%= @userdetail.artist_type %>
+
+</div>
+
+</div>
+
+
+
+
 
 </main>
 

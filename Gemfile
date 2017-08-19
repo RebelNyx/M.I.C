@@ -34,6 +34,8 @@ end
 
 gem 'countries'
 
+gem 'omniauth-facebook'
+
 gem 'country_select'
 
 gem 'ransack'

@@ -6,5 +6,12 @@ class HomeController < ApplicationController
 	def index
 
 	end
+
+ def people
+   
+    @users = User.all
+
+
+  end
 	
 end

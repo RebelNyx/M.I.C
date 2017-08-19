@@ -742,7 +742,7 @@ margin: 15px;
 
 
     line-height: 50px;
-    color: grey;
+    color: black;
     
        
     font-family: sans-serif;
@@ -775,5 +775,11 @@ padding-bottom: 20px;
 
  border-bottom: 1px solid white;
 
+}
+
+a:hover {
+
+    background-color: white;
+    color: black;
 }
 

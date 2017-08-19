@@ -47,7 +47,7 @@ Rails.application.routes.draw do
   post '/upload' => 'userdetails#upload'
   
 
-
+  get '/people' => 'home#people'
   get '/home' => "home#index"
   get '/users' => 'userdetails#users'
   post '/follow' => 'follow#follow_toggle'

@@ -22,7 +22,14 @@
  
 
  <% end %>
+
+ <% if user_signed_in? %>
+
  <%= render 'follow', user: user %>
+
+ <% end %>
+
+
 
  <%= user.userdetail.musician %>
  </div>

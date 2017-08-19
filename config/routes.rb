@@ -27,6 +27,7 @@ Rails.application.routes.draw do
      put 'jampad_details/:id' => 'jampad_details#update'
 
      delete 'jampads/:id' => 'jampads#jampad_destroy'
+     
 
 
 

@@ -1,7 +1,8 @@
 module UserdetailsHelper
 
 def options_for_musicians
-  ['Orchestrator',
+  [
+    'Orchestrator',
   	'Improviser',
   	'Rapper',
     'Conductor',
@@ -25,7 +26,6 @@ def options_for_musicians
     'Bassist',
     'Harpist',
     'Bouzouki player',
-    'Hornist',
     'Euphoniumist',
     'Organ grinder',
     'Drummer',

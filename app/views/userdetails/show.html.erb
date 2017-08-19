@@ -148,7 +148,7 @@ remote: true   %> : <%= @userdetail.user.followees_count %></span>
 
 
 
- <a href = "  <%= @userdetail.fblink %>">
+ <a href = "  <%= "http://#{@userdetail.fblink}" %>">
 
  <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
 
@@ -161,8 +161,7 @@ remote: true   %> : <%= @userdetail.user.followees_count %></span>
 
 
 
-
-<a href = "<%= @userdetail.ytlink %>">
+<a href = "<%= "http://#{@userdetail.ytlink}" %>">
 
 <i class="fa fa-youtube-play fa-2x" aria-hidden="true"></i>
  
@@ -175,7 +174,7 @@ remote: true   %> : <%= @userdetail.user.followees_count %></span>
 <div id="user_soundcloud">
 
 
-<a href = " <%= @userdetail.soundcloud %>">
+<a href = " <%= "http://#{@userdetail.soundcloud}"  %>">
 
 <i class="fa fa-soundcloud fa-2x" aria-hidden="true"></i>
 
@@ -188,21 +187,6 @@ remote: true   %> : <%= @userdetail.user.followees_count %></span>
 
 
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 </div>

@@ -14,6 +14,18 @@
 <div class = "loggedin">
 <h3> Logged In User : </h3><hr> 
 <%= current_user.first_name + current_user.last_name %> <br>
+<div class = "users_photo">
+<% if current_user.profile_photo %>
+
+<img  id = "image" src="/uploads/<%= current_user.profile_photo %>" alt="<%= current_user.first_name %>"  >
+
+<% else %>
+
+<img src="<%= asset_path('default.png') %>">
+
+<% end %>
+</div>
+<%= current_user.userdetail.musician %>
 
 </div>
 

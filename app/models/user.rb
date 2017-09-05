@@ -18,6 +18,25 @@ class User < ActiveRecord::Base
          has_many :jampads , dependent: :destroy
 
 
+
+enum role: {member: 0, editor: 2, moderator: 1, admin: 3} 
+
+def can_modify user
+ if User.roles[user.role] > User.roles["editor"]
+      return true
+     else
+       return userdetail.id == user.id
+     end
+ 
+   end
+
+
+
+
+
+           
+
+
 def follow_relation user_id
 
   	if id == user_id

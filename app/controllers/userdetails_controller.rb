@@ -3,7 +3,7 @@ class UserdetailsController < ApplicationController
 
     before_action :authenticate_user! 
 
-    before_action :check , only: [:new]
+    before_action :check , only:[:new]
 
     def check
 
@@ -43,6 +43,8 @@ class UserdetailsController < ApplicationController
     end
   
   end
+
+  
 
 
 

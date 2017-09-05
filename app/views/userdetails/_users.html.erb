@@ -29,9 +29,17 @@
 
  <% end %>
 
+ <% if user.can_modify current_user %>
+		<%= link_to "Delete",  '/' %>
+		<%= link_to 'Destroy', user.userdetail, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+ 	<% end %>
 
 
- <%= user.userdetail.musician %>
+
+  <%= user.userdetail.musician %> 
+
+
  </div>
 
 

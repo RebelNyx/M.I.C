@@ -51,7 +51,9 @@ Rails.application.routes.draw do
   get '/home' => "home#index"
   get '/users' => 'userdetails#users'
   post '/follow' => 'follow#follow_toggle'
-  
+
+
+  delete 'userdetails/:id' => 'userdetails#destroy'
  
   get '/followers' => 'follow#followers'
   get '/following' => 'follow#following'

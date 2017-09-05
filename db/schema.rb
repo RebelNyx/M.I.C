@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170819082345) do
+ActiveRecord::Schema.define(version: 20170905162432) do
 
   create_table "follower_mappings", force: :cascade do |t|
     t.integer  "follower_id"
@@ -67,14 +67,15 @@ ActiveRecord::Schema.define(version: 20170819082345) do
 
   create_table "userdetails", force: :cascade do |t|
     t.integer  "user_id"
-    t.string   "bio",                          null: false
-    t.string   "artist_type",                  null: false
+    t.string   "bio",                           null: false
+    t.string   "artist_type",                   null: false
     t.string   "fblink"
     t.string   "ytlink"
     t.string   "soundcloud"
-    t.datetime "created_at",                   null: false
-    t.datetime "updated_at",                   null: false
-    t.string   "musician",    default: "Band", null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.string   "musician",     default: "Band", null: false
+    t.integer  "report_count", default: 0
   end
 
   add_index "userdetails", ["user_id"], name: "index_userdetails_on_user_id"
@@ -102,6 +103,7 @@ ActiveRecord::Schema.define(version: 20170819082345) do
     t.string   "profile_photo"
     t.string   "provider"
     t.string   "uid"
+    t.integer  "role",                   default: 0
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
